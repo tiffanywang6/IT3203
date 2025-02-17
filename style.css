@@ -1,18 +1,6 @@
-main{
-  width: auto;
-  margin: auto;
-  max-width: 800px;
-}
-
 header{
   background-color: #a8b9a1;
   padding 20px;
-}
-
-header{
-  margin: 0;
-  color: white;
-  font-size: 20px;
 }
 
 header h1{
