@@ -12,10 +12,33 @@ header{
   padding: 20px;
 }
 
+#main{
+  color: #2c3e3a;
+  font-weight: 900;
+}
+
 h1{
   margin: 0;
   color: white;
   font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+  color: #3e5948;
+}
+
+.table-title{
+  font-size: 25px;
+  font-weight: 800;
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.table-content{
+  font-size: 18px;
+  text-alignL left;
+  padding: 8px;
 }
 
 nav ul{
@@ -34,7 +57,9 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-  text-decoration: underline;
+  background-color: #3e5948;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 footer{
@@ -44,21 +69,24 @@ footer{
   margin-top: 20px;
 }
 
-table{
-    margin: 20px auto;
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: none; 
 }
 
 td{
     padding: 10px;
 }
 
-td a{
-    text-decoration: none;
-    font-size: 20px;
-    color: #2c3e3a;
+td a {
+  text-decoration: none;
+  color: #2c3e3a;
+  border: transparent;
 }
 
-td a:hover{
-    color: #527156;
+td a:hover {
+  color: #527156;
+  border: 2px solid #527156; 
+  border-radius: 5px;
 }
-
