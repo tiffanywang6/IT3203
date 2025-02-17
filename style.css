@@ -1,6 +1,6 @@
 header{
   background-color: #a8b9a1;
-  padding 20px;
+  padding: 20px;
 }
 
 h1{
@@ -20,11 +20,6 @@ nav ul li{
 }
 
 nav ul li a{
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a{
   color: white;
   font-size: 20px;
 }
@@ -33,9 +28,9 @@ nav ul li a:hover{
   text-decoration: underline;
 }
 
-body{
-  font-family: Arial;
+body {
   text-align: center;
+  font-family: Arial;
   margin: 0;
   padding: 0;
   background-color: #eef1e9;
