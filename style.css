@@ -37,13 +37,15 @@ h2 {
 
 .table-content{
   font-size: 18px;
-  text-alignL left;
-  padding: 8px;
+  text-align: left;
+  padding: 10px;
 }
 
 nav ul{
   padding: 0;
   margin: 10px 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li{
@@ -69,7 +71,7 @@ footer{
   margin-top: 20px;
 }
 
-table{
+table {
   margin: 20px auto;
   border-collapse: collapse;
   background: none; 
@@ -79,13 +81,13 @@ td{
     padding: 10px;
 }
 
-td a{
+td a {
   text-decoration: none;
   color: #2c3e3a;
   border: transparent;
 }
 
-td a:hover{
+td a:hover {
   color: #527156;
   border: 2px solid #527156; 
   border-radius: 5px;
