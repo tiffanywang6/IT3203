@@ -38,11 +38,10 @@ h2 {
   color: #3e5948;
 }
 
-.table-title{
+.page-title{
   font-size: 25px;
   font-weight: 800;
   padding: 10px;
-  text-decoration: underline;
 }
 
 .table-content{
