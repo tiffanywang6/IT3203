@@ -22,6 +22,11 @@ header{
   font-weight: 900;
 }
 
+#footer{
+  font-family: Arial;
+  font-weight: 550;
+}
+
 h1{
   margin: 0;
   color: white;
