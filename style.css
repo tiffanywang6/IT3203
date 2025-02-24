@@ -127,8 +127,19 @@ td a:hover {
 }
 
 .external-sites{
+  list-style-type: none;
+  display: flex;
+}
+
+.external-sites a{
   padding: auto;
   display: inline-block;
   text-decoration: none;
+}
+
+.external-sites img{
+  vertical-align: text-bottom;
+  margin-right: 5px;
+  height: 14px;
 }
 
