@@ -115,19 +115,19 @@ td{
   border-bottom: 1px solid #527156
 }
 
-td a {
+td a{
   text-decoration: none;
   color: #2c3e3a;
   border: transparent;
 }
 
-td a:hover {
+td a:hover{
   color: #527156;
   border: 2px solid #527156; 
   border-radius: 5px;
 }
 
-.container {
+.container{
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   display: grid;
   gap: 20px;
@@ -135,7 +135,7 @@ td a:hover {
   margin: 20px auto;
 }
 
-.external-sites {
+.external-sites{
   background-color: #ffff;
   border: 1px solid #dddd;
   padding: 15px;
@@ -143,20 +143,20 @@ td a:hover {
   box-shadow: 0 2px 5px;
 }
 
-.external-sites img {
+.external-sites img{
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto 10px;
 }
 
-.external-sites p {
+.external-sites p{
   margin: 0;
   font-size: 14px;
   color: #2c3e3a;
 }
 
-img{
+.report-img img{
   padding: 25px;
   max-width: 500px;
   height: auto;
