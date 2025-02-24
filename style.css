@@ -26,19 +26,14 @@ header{
   font-weight: 900;
 }
 
-#footer{
-  font-family: Arial;
-  font-weight: 550;
-}
-
 h1{
   margin: 0;
   color: white;
   font-size: 30px;
 }
 
-h2 {
-  font-size: 25px;
+h2{
+  Font-size: 25px;
   color: #3e5948;
 }
 
@@ -69,6 +64,7 @@ nav ul li{
 nav ul li a{
   color: white;
   font-size: 20px;
+  text-decoration: none;
 }
 
 nav ul li a:hover{
@@ -82,6 +78,11 @@ footer{
   color: white;
   padding: 15px;
   margin-top: 20px;
+}
+
+#footer{
+  font-family: Arial;
+  font-weight: 550;
 }
 
 table {
@@ -126,19 +127,33 @@ td a:hover {
   border-radius: 5px;
 }
 
-.external-sites{
-  list-style-type: none;
-  display: flex;
+.container {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: grid;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
-.external-sites a{
-  padding: auto;
-  text-decoration: none;
+.external-sites {
+  background-color: #ffff;
+  border: 1px solid #dddd;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px;
 }
 
-.external-sites img{
-  vertical-align: text-bottom;
-  margin-right: 5px;
-  height: 50px;
+.external-sites img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
 }
+
+.external-sites p {
+  margin: 0;
+  font-size: 14px;
+  color: #2c3e3a;
+}
+
 
