@@ -1,8 +1,12 @@
+main{
+  width: 80%;
+  margin: auto;
+  max-width: 800px;
+}
+
 body{
   text-align: center;
   font-family: Arial;
-  margin: 20px;
-  padding: 20px;
   background-color: #eef1e9;
   color: #2c3e3a;
 }
@@ -10,8 +14,6 @@ body{
 p{
   font-size: 15px;
   font-family: Georgia;
-  margin: 20px;
-  padding: 20px;
 }
 
 header{
