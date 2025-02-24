@@ -126,3 +126,9 @@ td a:hover {
   border-radius: 5px;
 }
 
+.external-sites{
+  padding: auto;
+  display: inline-block;
+  text-decoration: none;
+}
+
