@@ -93,7 +93,7 @@ table {
 
 .table-container{
   margin: 20px;
-  max-weidth: 80%;
+  max-width: 80%;
   max-height: 500px;
   overflow-y: auto;
   border: 1px solid #3e5948;
@@ -165,6 +165,3 @@ td a:hover{
 .report-content{
   text-align: left;
 }
-
-
-
