@@ -1,167 +1,195 @@
+/* this is the main container style */
 main{
-  width: 80%;
-  margin: auto;
-  max-width: 800px;
+  width: 80%; /* it uses only 80% of the screen's width */
+  margin: auto; /* centers the container */
+  max-width: 800px; /* limits the container's width to 800px */
 }
 
+/* this is styling for the body */
 body{
-  text-align: center;
-  font-family: Arial;
-  background-color: #eef1e9;
-  color: #2c3e3a;
+  text-align: center; /* centers text */
+  font-family: Arial; /* sets the body font to Arial */
+  background-color: #eef1e9; /* the background color of a body is set to this color */
+  color: #2c3e3a; /* sets the text color */
 }
 
+/* this is styling for paragraphs */
 p{
-  font-size: 15px;
-  font-family: Georgia;
+  font-size: 15px; /* sets the font size */
+  font-family: Georgia; /* sets the font to Georgia */
 }
 
+/* this is the styling for headers */
 header{
-  background-color: #a8b9a1;
-  padding: 20px;
+  background-color: #a8b9a1; /* sets the background color */
+  padding: 20px; /* this adds padding around the header */
 }
 
+/* used id selector to style header titles */
 #header-title{
-  color: #2c3e3a;
-  font-weight: 900;
+  color: #2c3e3a; /* sets the header color */
+  font-weight: 900; /* makes the text bolder */
 }
 
+/* styling for h1 */
 h1{
-  margin: 0;
-  color: white;
-  font-size: 30px;
+  margin: 0; /* sets the margins to 0 */
+  color: white; /* sets text color */
+  font-size: 30px; /* sets the font size */
 }
 
+/* styling for h2 */
 h2{
-  Font-size: 25px;
-  color: #3e5948;
+  Font-size: 25px; /* sets the font size */
+  color: #3e5948; /* sets text color */
 }
 
+/* used class selector to style the titles for each page title */
 .page-title{
-  font-size: 25px;
-  font-weight: 800;
-  padding: 10px;
+  font-size: 25px; /* sets font size */
+  font-weight: 800; /* makes the font bolder */
+  padding: 10px; /* adds padding around the title */
 }
 
+/* this is styling for the unordered list in the navigation */
 nav ul{
-  padding: 0;
-  margin: 10px 0;
-  display: flex;
-  justify-content: center;
+  padding: 0; /* sets padding to 0, removes the default */
+  margin: 10px 0; /* sets margin on left and right sides */
+  display: flex; /* applies flexbox layout */
+  justify-content: center; /* centers the items */
 }
 
+/* styling for list items */
 nav ul li{
-  display: inline;
-  margin: 0 15px;
+  display: inline; /* puts all the list's items inline */
+  margin: 0 15px; /* adds spacing between each item */
 }
 
-nav ul li a{
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
+/* styling for the navigation links */
+nav ul li a{ 
+  color: white; /* sets the color of the links */
+  font-size: 20px; /* sets the font size */
+  text-decoration: none; /* removes the underline when hovering links */
 }
 
+/* styling for hover effects on navigation links */
 nav ul li a:hover{
-  background-color: #3e5948;
-  border-radius: 5px;
-  padding: 10px;
+  background-color: #3e5948; /* the background color of links when hovering */
+  border-radius: 5px; /* rounds the corners of the hover box */
+  padding: 10px; /* adds padding to make the hover effect look like a box */
 }
 
+/* footer styling */
 footer{
-  background: #a8b9a1;
-  color: white;
-  padding: 15px;
-  margin-top: 20px;
+  background: #a8b9a1; /* footer background color */
+  color: white; /* footer text color */
+  padding: 15px; /* padding for the footer */
+  margin-top: 20px; /* adds space above the footer */
 }
 
+/* used id selector to give the footer text a specific style */
 #footer{
-  font-family: Arial;
-  font-weight: 550;
+  font-family: Arial; /* set footer text to Arial */
+  font-weight: 550; /* makes the text bolder */
 }
 
-table {
-  margin: auto;
-  border-collapse: collapse;
-  background: none; 
+/* styling for tables */
+table { 
+  margin: auto; /* centers the table */
+  border-collapse: collapse; /* collapses the borders on a table */
+  background: none; /* removes any backgrounds on a table */
 }
 
+/* used class selector to style the content in a table */
 .table-content{
-  font-size: 18px;
-  text-align: left;
-  padding: 10px;
+  font-size: 18px; /* set font size */
+  text-align: left; /* aligns the table text left */
+  padding: 10px; /* adds padding on the inside of a table cell */
 }
 
+/* used class selector to style the container for the table */
 .table-container{
-  margin: auto;
-  max-width: 80%;
-  max-height: 500px;
-  overflow-y: auto;
-  border: 5px solid #3e5948;
-  text-align: left;
+  margin: auto; /* centers the container */
+  max-width: 80%; /* limits how big the container is */
+  max-height: 500px; /* limits how big the container is */
+  overflow-y: auto; /* this adds a scrollbar if the table's content forces the table to exceed its height */
+  border: 5px solid #3e5948; /* adds a boarder around the container */
+  text-align: left; /* aligns text to the left */
 }
 
+/* styling for the table header */
 thead{
-  position: sticky;
+  position: sticky; /* this makes the table header fixed, so if there were a lot of key terms and the table had a scrollbar, the header would always be visible  */
 }
 
+/* styling for the table header cells */
 th{
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #527156
+  padding: 10px; /* adds padding inside cells */
+  text-align: left; /* aligns text to the left */
+  border-bottom: 1px solid #527156 /* sets the border size, color, and look */
 }
 
-td{
-  padding: 20px;
-  border-bottom: 1px solid #527156
+/* setyling for the table data */
+td{ 
+  padding: 20px; /* adds padding inside each data cell */
+  border-bottom: 1px solid #527156 /* sets the border color, size, and look */
 }
 
+/* styling for the links inside a table cell */
 td a{
-  text-decoration: none;
-  color: #2c3e3a;
-  border: transparent;
+  text-decoration: none; /* removes any underlines for hover links */
+  color: #2c3e3a; /* sets the color of text */
+  border: transparent; /* no boarder */
 }
 
+/* hover effects for the links inside of a table cell */
 td a:hover{
-  color: #527156;
-  border: 2px solid #527156; 
-  border-radius: 5px;
+  color: #527156; /* sets the color link on hover */
+  border: 2px solid #527156; /* adds a border to the hover  */ 
+  border-radius: 5px; /* rounds the corners of the hover box */
 }
 
+/* styling for class selector for container */
 .container{
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  display: grid;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 20px auto;
+  display: grid; /* uses grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* uses grid layout to create a responsive column  */
+  gap: 20px; /* sets a gap between each grid */
+  max-width: 1000px; /* limits the size of each container */
+  margin: 20px auto; /* centers the container while adding a set margin */
 }
 
+/* styling for each external link grid */
 .external-sites{
-  background-color: #ffff;
-  border: 1px solid #dddd;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 2px 5px;
+  background-color: #ffff; /* background color of the grid */
+  border: 1px solid #dddd; /* border of each grid */
+  padding: 15px; /* adds padding inside each grid */
+  text-align: center; /* centers the text in each grid */
+  box-shadow: 0 2px 5px; /* adds a small shadow effect to each grid */
 }
 
+/* styling for the images in each grid */
 .external-sites img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
+  max-width: 100%; /* limits the size of images to the grid */
+  height: auto; /* auto adjusts the images height to keep its ratio */
+  display: block; /* puts the images in blocks */
+  margin: 0 auto 10px; /* centers the images and adds a small gap underneath for text */
 }
 
+/* styling for external link paragraph text */
 .external-sites p{
-  margin: 0;
-  font-size: 14px;
-  color: #2c3e3a;
+  margin: 0; /* sets the margin to 0 */
+  font-size: 14px; /* sets the font size */
+  color: #2c3e3a; /* sets the font color */
 }
 
+/* styling for the images on subsections of my report */
 .report-img img{
-  padding: 25px;
-  max-width: 500px;
-  height: auto;
+  padding: 25px; /* adds padding around the images */
+  max-width: 500px; /* limits the size of the image */
+  height: auto; /* auto adjusts the image heights to keep its ratio */
 }
 
+/* styling for the report text */
 .report-content{
-  text-align: left;
+  text-align: left; /* aligns the text left */
 }
