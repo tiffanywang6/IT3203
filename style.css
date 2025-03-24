@@ -1,8 +1,9 @@
 /* this is the main container style */
 main{
-  width: 80%; /* it uses only 80% of the screen's width */
-  margin: auto; /* centers the container */
-  max-width: 800px; /* limits the container's width to 800px */
+  width: 100%;
+  margin: 0;
+  max-width: none;
+  padding: 0 10px; 
 }
 
 /* this is styling for the body */
