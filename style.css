@@ -194,3 +194,42 @@ td a:hover{
 .report-content{
   text-align: left; /* aligns the text left */
 }
+
+.question-box{
+  background-color: #ffffff;
+  border: 2px solid #a8b9a1;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.question-box p{
+  font-size: 18px;
+  font-weight: 700;
+  color: #3e5948;
+}
+
+.question-box label{
+  display: block;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+#quiz-form button{
+  background-color: #3e5948;
+  color: white;
+  padding: 12px 25px;
+  margin: 15px 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#quiz-form button:hover{
+  background-color: #527156;
+}
