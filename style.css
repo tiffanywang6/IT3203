@@ -286,7 +286,7 @@ td a:hover{
 
 .pass, .fail {
   background-color: #f9fdf7;
-  display: block;
+  display: inline-block;
   border: 2px solid #a8b9a1;
   padding: 20px 30px;
   border-radius: 15px;
