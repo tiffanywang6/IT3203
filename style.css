@@ -286,13 +286,14 @@ td a:hover{
 
 .pass, .fail {
   background-color: #f9fdf7;
-  display: inline-block;
+  display: block;
   border: 2px solid #a8b9a1;
   padding: 20px 30px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   font-weight: 900;
   font-size: 30px;
-  margin-top: 20px;
+  margin: 20px auto;
+  width: fit-content;
 }
  
