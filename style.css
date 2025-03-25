@@ -12,6 +12,8 @@ body{
   font-family: Arial; /* sets the body font to Arial */
   background-color: #eef1e9; /* the background color of a body is set to this color */
   color: #2c3e3a; /* sets the text color */
+  margin: 0;
+  padding: 0;
 }
 
 /* this is styling for paragraphs */
