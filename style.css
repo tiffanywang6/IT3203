@@ -259,15 +259,6 @@ td a:hover{
   opacity: 1;
 }
 
-#results strong{
-  display: block;
-  margin-top: 30px;
-  font-size: 40px;
-  font-weight: 900;
-  color: #3e5948;
-  text-align: center;
-}
-
 .finalResults {
   text-align: center;
   font-size: 40px;
