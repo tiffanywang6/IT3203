@@ -256,3 +256,18 @@ td a:hover{
   color: #3e5948;
   text-alignt: center;
 }
+
+.pass{
+  color: green;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.fail{
+  color: red;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
