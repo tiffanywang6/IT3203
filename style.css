@@ -233,3 +233,26 @@ td a:hover{
 #quiz-form button:hover{
   background-color: #527156;
 }
+
+#results{
+  background-color: #f9fdf7;
+  border: 2px solid #a8b9a1;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: left;
+  font-size: 18px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+  color: #2c3e3a;
+  line-height:1.5;
+}
+
+#results strong{
+  display: block;
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #3e5948;
+  text-alignt: center;
+}
