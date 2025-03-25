@@ -236,21 +236,21 @@ td a:hover{
   background-color: #527156;
 }
 
-#results{
+#results {
   background-color: #f9fdf7;
   border: 2px solid #a8b9a1;
   border-radius: 10px;
   padding: 30px;
   max-width: 500px;
   margin: 40px auto;
+  text-align: left; /* <-- keep this only! */
   font-size: 18px;
   box-shadow: 0 5px 12px rgba(0,0,0,0.05);
   color: #2c3e3a;
-  line-height:1.5;
+  line-height: 1.5;
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
-  text-align: left;
 }
 
 #results.show{
