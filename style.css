@@ -267,6 +267,10 @@ td a:hover{
   text-alignt: center;
 }
 
+.finalResults{
+  color: 
+}
+
 .pass{
   color: green;
   text-align: center;
@@ -282,7 +286,8 @@ td a:hover{
 }
 
 .pass, .fail{
-  background-color: #a8b9a1;
+  background-color: #f9fdf7;
+  boder: 2px solid #a8b9a1;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
