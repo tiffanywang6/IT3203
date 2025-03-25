@@ -116,7 +116,7 @@
         const q1 = quiz.querySelector('input[name="q1"]:checked');
         if(q1 && q1.value === "c"){
           score++;
-          output += "1. Correct!✅";
+          output += "1. Correct!✅<br>";
         }
         else{
           output += "1. ❌ Correct Answer is Tim Berners-Lee<br>";
@@ -130,7 +130,7 @@
         const q2answer = ["HTML", "URL", "HTTP"];
         if(arraysMatch(q2answer, q2selected)){
           score++;
-          output += "2. Correct!✅";
+          output += "2. Correct!✅<br>";
         }
         else{
           output += "2. ❌ Correct Answer is HTML, URL, HTTP<br>";
@@ -139,7 +139,7 @@
         const q3 = quiz.querySelector('input[name="q3"]:checked');
         if(q3 && q3.value === "b"){
           score++;
-          output += "3. Correct!✅";
+          output += "3. Correct!✅<br>";
         }
         else{
           output += "3. ❌ Correct Answer is Microsoft Excel<br>";
@@ -148,7 +148,7 @@
         const q4 = quiz.querySelector('input[name="q4"]:checked');
         if(q4 && q4.value === "d"){
           score++;
-          output += "4. Correct!✅";
+          output += "4. Correct!✅<br>";
         }
         else{
           output += "4. ❌ Correct Answer is CSS<br>";
@@ -157,7 +157,7 @@
         const q5 = quiz.querySelector('input[name="q5"]').value.trim().toLowerCase();
         if(q5 === "hypertext markup language"){
           score++;
-          output += "5. Correct!✅";
+          output += "5. Correct!✅<br>";
         }
         else{
           output += "5. ❌ Correct Answer is HyperText Markup Language<br>";
@@ -171,7 +171,7 @@
         const q6answer = ["HTTP/HTTPS", "File Paths", "Domain Name"];
         if(arraysMatch(q6answer, q6selected)){
           score++;
-          output += "6. Correct!✅";
+          output += "6. Correct!✅<br>";
         }
         else{
           output += "6. ❌ Correct Answer is HTTP/HTTPS, File Paths, Domain Name<br>";
@@ -180,7 +180,7 @@
         const q7 = quiz.querySelector('input[name="q7"]').value.trim().toLowerCase();
         if(q7 === "uniform resource locator"){
           score++;
-          output += "7. Correct!✅";
+          output += "7. Correct!✅<br>";
         }
         else{
           output += "7. ❌ Correct Answer is Uniform Resource Locator<br>";
@@ -189,7 +189,7 @@
         const q8 = quiz.querySelector('input[name="q8"]:checked');
         if(q8 && q8.value == "a"){
           score++;
-          output += "8. Correct!✅";
+          output += "8. Correct!✅<br>";
         }
         else{
           output += "8. ❌ Correct Answer is www.kennesaw.edu<br>";
@@ -198,7 +198,7 @@
         const q9 = quiz.querySelector('input[name="q9"]:checked');
         if(q9 && q9.value == "a"){
           score++;
-          output += "9. Correct!✅";
+          output += "9. Correct!✅<br>";
         }
         else{
           output += "9. ❌ Correct Answer is To connect web pages<br>";
@@ -207,7 +207,7 @@
         const q10 = quiz.querySelector('input[name="q10"]').value.trim().toLowerCase();
         if(q10 === "hypertext transfer protocol"){
           score++;
-          output += "10. Correct!✅";
+          output += "10. Correct!✅<br>";
         }
         else{
           output += "10. ❌ Correct Answer is HyperText Transfer Protocol<br>";
