@@ -219,7 +219,10 @@
         else{
           output += "<h3 class='fail'> You Failed! 😥</h3>";
         }
-        document.getElementById('results').innerHTML = output;
+
+        const resultsShow = document.getElementById('results');
+        resultsShow.innerHTML = output;
+        resultsShow.classList.add('show');
       }
 
       function arraysMatch(correct, selected){
@@ -236,7 +239,9 @@
   
       function resetQuiz(){
         document.getElementById('quiz-form').reset();
-        document.getElementById('results').innerHTML = "";
+        const resultsShow = document.getElementById('results');
+        resultsShow.innerHTML = "";
+        resultsShow.classList.remove('show');
       }
     </script>
   </body>
