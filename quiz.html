@@ -23,16 +23,16 @@
       </header>
       
       <h2 class="page-title">SELF-ASSESSMENT QUIZ</h2>
-      <form id="quiz-form">
-        <div class="question-box">
-          <p><strong>1. Who invented the World Wide Web?</strong></p>
+      <form id="quiz-form"> <!-- quiz starts here -->
+        <div class="question-box"> <!-- put this here to section off each question in a box -->
+          <p><strong>1. Who invented the World Wide Web?</strong></p> <!-- radio button question -->
           <label><input type="radio" name="q1" value="a">Steve Jobs</label>
           <label><input type="radio" name="q1" value="b">Bill Gates</label>
           <label><input type="radio" name="q1" value="c">Tim Berners-Lee</label>
           <label><input type="radio" name="q1" value="d">Mark Zuckerberg</label>
         </div>
 
-        <div class="question-box">
+        <div class="question-box"> <!-- multiple choice question -->
           <p><strong>2. Which of the following are the core technologies that form the World Wide Web?</strong></p>
           <label><input type="checkbox" name="q2" value="HTML">HTML</label>
           <label><input type="checkbox" name="q2" value="DNS">DNS</label>
@@ -57,7 +57,7 @@
           <label><input type="radio" name="q4" value="d">CSS</label>
         </div>
 
-        <div class="question-box">
+        <div class="question-box"> <!-- short answer question -->
           <p><strong>5. What does HTML stand for?</strong></p>
           <input type="text" name="q5">
         </div>
@@ -95,11 +95,11 @@
           <input type="text" name="q10">
         </div>
 
-        <button type="button" onclick="checkAnswers()">Submit Answers</button>
-        <button type="button" onclick="resetQuiz()">Restart Quiz</button>
+        <button type="button" onclick="checkAnswers()">Submit Answers</button> <!-- button for submitting quiz -->
+        <button type="button" onclick="resetQuiz()">Restart Quiz</button> <!-- button for restarting quiz -->
       </form>
 
-      <div id="results"></div>
+      <div id="results"></div> <!-- quiz results will be displayed in this div -->
 
       <footer>
         <p id="footer">DEVELOPED BY TWANG6 FOR IT 3203</p>
@@ -107,28 +107,28 @@
     </main>
 
 
-    <script>
-      function checkAnswers(){
-        let score = 0;
-        let output = "";
-        const quiz = document.getElementById('quiz-form');
+    <script> //my javascript for the quiz
+      function checkAnswers(){ //this is a function that checks the answer and calculates the score
+        let score = 0; //a counter to track correct answers
+        let output = ""; //a string that will list all the feedback for each question
+        const quiz = document.getElementById('quiz-form'); //this line is so that it knows to reference the quiz 
 
-        const q1 = quiz.querySelector('input[name="q1"]:checked');
-        if(q1 && q1.value === "c"){
-          score++;
-          output += "1. ✅ Correct!<br>";
+        const q1 = quiz.querySelector('input[name="q1"]:checked'); //finds the question with the name q1
+        if(q1 && q1.value === "c"){ //checks if user selected the correct answer
+          score++; //adds 1 to the score if correct
+          output += "1. ✅ Correct!<br>"; 
         }
         else{
-          output += "1. ❌ Correct Answer is Tim Berners-Lee<br>";
+          output += "1. ❌ Correct Answer is Tim Berners-Lee<br>"; //if incorrect, it will add this string to the output
         }
 
-        let q2selected = [];
-        const q2options = quiz.querySelectorAll('input[name="q2"]:checked');
-        for(let i=0; i<q2options.length; i++){
-          q2selected.push(q2options[i].value);
+        let q2selected = []; //this will hold all the selected options in q2
+        const q2options = quiz.querySelectorAll('input[name="q2"]:checked'); //this gets all the answers that were selected in q2
+        for(let i=0; i<q2options.length; i++){ //a loop that goes through all the options selected
+          q2selected.push(q2options[i].value); //adds all the selected values into the q2selected array
         }
-        const q2answer = ["HTML", "URL", "HTTP"];
-        if(arraysMatch(q2answer, q2selected)){
+        const q2answer = ["HTML", "URL", "HTTP"]; //defines what is correct
+        if(arraysMatch(q2answer, q2selected)){ //compares the answers
           score++;
           output += "2. ✅ Correct!<br>";
         }
@@ -136,7 +136,7 @@
           output += "2. ❌ Correct Answer is HTML, URL, HTTP<br>";
         }
 
-        const q3 = quiz.querySelector('input[name="q3"]:checked');
+        const q3 = quiz.querySelector('input[name="q3"]:checked'); 
         if(q3 && q3.value === "b"){
           score++;
           output += "3. ✅ Correct!<br>";
@@ -154,8 +154,8 @@
           output += "4. ❌ Correct Answer is CSS<br>";
         }
 
-        const q5 = quiz.querySelector('input[name="q5"]').value.trim().toLowerCase();
-        if(q5 === "hypertext markup language"){
+        const q5 = quiz.querySelector('input[name="q5"]').value.trim().toLowerCase(); //gets the text input, trims all spaces, and makes the text lowercase
+        if(q5 === "hypertext markup language"){ //compares the input to the correct answer
           score++;
           output += "5. ✅ Correct!<br>";
         }
@@ -213,36 +213,38 @@
           output += "10. ❌ Correct Answer is HyperText Transfer Protocol<br>";
         }
         
-        output += "<h2 class='finalResults'>Results: " + score + " out of 10</h2>";
+        output += "<h2 class='finalResults'>Results: " + score + " out of 10</h2>"; //this will show the final score
         if(score >= 7){
-          output += "<h3 class='pass'>YOU PASSED! 🎉</h3>";
+          output += "<h3 class='pass'>YOU PASSED! 🎉</h3>"; //message if passed
         }
         else{
-          output += "<h3 class='fail'> YOU FAILED! 😥</h3>";
+          output += "<h3 class='fail'> YOU FAILED! 😥</h3>"; //message if failed
         }
 
-        const resultsShow = document.getElementById('results');
+        //this section is so that the results will show in the results div
+        const resultsShow = document.getElementById('results'); 
         resultsShow.innerHTML = output;
         resultsShow.classList.add('show');
       }
 
-      function arraysMatch(correct, selected){
-        if(correct.length !== selected.length){
+      function arraysMatch(correct, selected){ //this is an array that compares two arrays regardless of its order
+        if(correct.length !== selected.length){ //if the array differ in length, they are not equal
           return false;
         }
-        for(let i=0; i<correct.length; i++){
-          if(!selected.includes(correct[i])){
+        for(let i=0; i<correct.length; i++){ 
+          if(!selected.includes(correct[i])){ //if the correct answer is missing, then it would return false
             return false;
           }
         }
         return true;
       }
-  
+
+      //this function is meant to reset the quiz and clear the results div
       function resetQuiz(){
-        document.getElementById('quiz-form').reset();
+        document.getElementById('quiz-form').reset(); //clear form selections and input
         const resultsShow = document.getElementById('results');
-        resultsShow.innerHTML = "";
-        resultsShow.classList.remove('show');
+        resultsShow.innerHTML = ""; //clears the results div
+        resultsShow.classList.remove('show'); //remove the CSS class 
       }
     </script>
   </body>
