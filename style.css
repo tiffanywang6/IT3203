@@ -197,93 +197,104 @@ td a:hover{
   text-align: left; /* aligns the text left */
 }
 
-.question-box{
-  background-color: #ffffff;
-  border: 2px solid #a8b9a1;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: left;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+/* styles each box that the quiz sits in */
+.question-box{ 
+  background-color: #ffffff; /* background color */
+  border: 2px solid #a8b9a1; /* boder color */
+  padding: 20px; /* adds some padding inside each box */
+  margin: 20px auto; /* centers */
+  max-width: 600px; /* limits the width of the box */
+  text-align: left; /* aligns the question text left */
+  border-radius: 15px; /* rounds the corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* adds a small shadow to the box */
 }
 
-.question-box p{
-  font-size: 18px;
-  font-weight: 700;
-  color: #3e5948;
+/* styles the question text inside each box */
+.question-box p{ 
+  font-size: 18px; /* larger font for the question */
+  font-weight: 700; /* bold */
+  color: #3e5948; /* text color */
 }
 
+/* styling for each label inside the box */
 .question-box label{
-  display: block;
-  margin: 8px 0;
-  font-size: 16px;
+  display: block; /* makes each label an entire line */
+  margin: 8px 0; /* adds vertical space between each label */
+  font-size: 16px; /* font size */
 }
 
+/* styles the button on the quiz */
 #quiz-form button{
-  background-color: #3e5948;
-  color: white;
-  padding: 12px 25px;
-  margin: 15px 10px;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  background-color: #3e5948; /* background color */
+  color: white; /* button text color */
+  padding: 12px 25px; /* adds space inside the button */
+  margin: 15px 10px; /* adds space around the button */
+  border: none; /* removes default border */
+  border-radius: 12px; /* rounds the corners */
+  font-size: 16px; /* text size */
+  cursor: pointer; /* cursor hover */
+  transition: background-color 0.3s; /* transition on hover */
 }
 
+/* adds a button hover effect */
 #quiz-form button:hover{
-  background-color: #527156;
+  background-color: #527156; /* color of the hover background */
 }
 
+/* styling for the results box */
 #results {
-  background-color: #f9fdf7;
-  border: 2px solid #a8b9a1;
-  border-radius: 10px;
-  padding: 30px;
-  max-width: 500px;
-  margin: 40px auto;
-  text-align: left; /* <-- keep this only! */
-  font-size: 18px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
-  color: #2c3e3a;
-  line-height: 1.5;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background-color: #f9fdf7; /* background color */
+  border: 2px solid #a8b9a1; /* border color and size */
+  border-radius: 10px; /* rounds the edges */
+  padding: 30px; /* adds space inside */
+  max-width: 500px; /* limits the width */
+  margin: 40px auto; /* centers and adds space */
+  text-align: left; /* aligns text left */
+  font-size: 18px; /* font size */
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05); /* adds a shadow */
+  color: #2c3e3a; /* text color */
+  line-height: 1.5; /* spaces between each line */
+  display: none; /* hides the default */
+  opacity: 0; /* starts invisible */
+  transition: opacity 0.3s ease; /* fade animation */
 }
 
-#results.show{
-  display: block;
-  opacity: 1;
+/* results will show when this class is added */
+#results.show{ 
+  display: block; /* makes it visible */
+  opacity: 1; /* fade */
 }
 
+/* final results style */
 .finalResults {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 900;
-  color: #3e5948;
-  margin-bottom: 20px;
+  text-align: center; /* centers the text */
+  font-size: 40px; /* text size */
+  font-weight: 900; /* bold */
+  color: #3e5948; /* text color */
+  margin-bottom: 20px; /* adds space below */
 }
 
+/* text for pass results */
 .pass{
   color: green;
 }
 
+/* text for fail results */
 .fail{
   color: red;
 }
 
+/* styling for both pass and fail message */
 .pass, .fail {
-  background-color: #f9fdf7;
-  text-align: center;
-  border: 2px solid #a8b9a1;
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  font-weight: 900;
-  font-size: 30px;
-  margin: 20px auto;
-  width: fit-content;
+  background-color: #f9fdf7; /* background */
+  text-align: center; /* centers text */
+  border: 2px solid #a8b9a1; /* adds a border */
+  padding: 20px 30px; /* adds spacing inside */
+  border-radius: 15px; /* rounds the corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* adds a small box shadow */
+  font-weight: 900; /* bold */
+  font-size: 30px; /* text size */
+  margin: 20px auto; /* adds spacing and center the text */
+  width: fit-content; /* makes the text only as wide as needed */
 }
  
