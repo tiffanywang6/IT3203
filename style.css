@@ -1,3 +1,12 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
 /* this is the main container style */
 main{
   max-width: 1200px;
@@ -22,23 +31,48 @@ p{
   font-family: Georgia; /* sets the font to Georgia */
 }
 
-/* this is the styling for headers */
+header, footer{
+  width: 100%;
+  background-color: #a8b9a1;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 header{
-  background-color: #a8b9a1; /* sets the background color */
-  padding: 20px; /* this adds padding around the header */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+footer{
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+/* used id selector to give the footer text a specific style */
+#footer{
+  font-family: Arial; /* set footer text to Arial */
+  font-weight: 550; /* makes the text bolder */
 }
 
 /* used id selector to style header titles */
 #header-title{
-  color: #2c3e3a; /* sets the header color */
+  flex: 1;
+  text-align: center;
+  font-size: 30px;
+  color: white; /* sets the header color */
+  margin: 0;
   font-weight: 900; /* makes the text bolder */
 }
 
 .header-flex{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding: 0 20px;
 }
 
 /* styling for h1 */
@@ -63,12 +97,13 @@ h2{
 
 /* this is styling for the unordered list in the navigation */
 nav ul{
+  list-style: none;
   padding: 0; /* sets padding to 0, removes the default */
-  margin: 10px 0; /* sets margin on left and right sides */
+  margin: 15px 0 0; /* sets margin on left and right sides */
   display: flex; /* applies flexbox layout */
   flex-wrap: wrap;
   justify-content: center; /* centers the items */
-  gap: 15px;
+  gap: 20px;
 }
 
 /* styling for list items */
@@ -95,25 +130,12 @@ nav ul li a:hover{
   display: none;
   background-color: #3e5948;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 15px;
   cursor: pointer;
-  border-radius: 8px;
-}
-
-/* footer styling */
-footer{
-  background: #a8b9a1; /* footer background color */
-  color: white; /* footer text color */
-  padding: 15px; /* padding for the footer */
-  margin-top: 20px; /* adds space above the footer */
-}
-
-/* used id selector to give the footer text a specific style */
-#footer{
-  font-family: Arial; /* set footer text to Arial */
-  font-weight: 550; /* makes the text bolder */
+  border-radius: 6px;
+  margin-right: auto;
 }
 
 img{
@@ -346,9 +368,8 @@ td a:hover{
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+    gap: 12px;
+    margin-top: 10px;
   }
 
   nav ul.show{
@@ -398,14 +419,14 @@ td a:hover{
   }
 
   #header-title{
-    font-size: 22px;
-    text-align: left;
     flex: 1;
+    text-align: center;
+    margin-right: 40px;
   }
 
   .header-flex{
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
