@@ -84,6 +84,18 @@ nav ul li a:hover{
   padding: 10px; /* adds padding to make the hover effect look like a box */
 }
 
+.menu-toggle{
+  display: none;
+  background-color: #3e5948;
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
 /* footer styling */
 footer{
   background: #a8b9a1; /* footer background color */
@@ -325,9 +337,16 @@ td a:hover{
   }
 
   nav ul{
+    display: none;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul.show{
+    display: flex;
   }
 
   .question-box{
@@ -366,6 +385,10 @@ td a:hover{
 
   td{
     font-size: 14px;
+  }
+
+  .menu-toggle{
+    display: blocks;
   }
 }
 
