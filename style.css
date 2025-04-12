@@ -1,9 +1,9 @@
 /* this is the main container style */
 main{
-  width: 100%;
-  margin: 0;
-  max-width: none;
-  padding: 0; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* this is styling for the body */
@@ -59,7 +59,9 @@ nav ul{
   padding: 0; /* sets padding to 0, removes the default */
   margin: 10px 0; /* sets margin on left and right sides */
   display: flex; /* applies flexbox layout */
+  flex-wrap: wrap;
   justify-content: center; /* centers the items */
+  gap: 15px;
 }
 
 /* styling for list items */
@@ -96,8 +98,14 @@ footer{
   font-weight: 550; /* makes the text bolder */
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+  display: blocks;
+}
+
 /* styling for tables */
-table { 
+table{ 
   margin: auto; /* centers the table */
   border-collapse: collapse; /* collapses the borders on a table */
   background: none; /* removes any backgrounds on a table */
@@ -185,11 +193,19 @@ td a:hover{
   color: #2c3e3a; /* sets the font color */
 }
 
+.report-img{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 /* styling for the images on subsections of my report */
 .report-img img{
-  padding: 25px; /* adds padding around the images */
+  width: 100%;
   max-width: 500px; /* limits the size of the image */
   height: auto; /* auto adjusts the image heights to keep its ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* styling for the report text */
@@ -310,7 +326,8 @@ td a:hover{
 
   nav ul{
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
   }
 
   .question-box{
@@ -322,9 +339,37 @@ td a:hover{
     padding: 15px;
     font-size: 16px;
   }
+
+  .report-img img{
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .table-container{
+    overflow-x: auto; /*adds horizontal scrolling*/
+    max-width: 95%;
+  }
+
+  table{
+    width: 100%; /*adjusts the table to fit its container*/
+    font-size: 14px;
+  }
+
+  td, th{
+    word-wrap: break-word;
+    padding: 10px;
+  }
+
+  th{
+    font-size: 16px;
+  }
+
+  td{
+    font-size: 14px;
+  }
 }
 
-@media(min-width: 769px) and (max-width: 992px){
+@media(min-width: 769px) and (max-width: 1024px){
   body{
     font-size: 16px;
   }
@@ -334,17 +379,30 @@ td a:hover{
   }
 
   nav ul{
-    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   .container{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  .report-img img{
+    max-width: 95%;
+  }
 }
 
-@media(min-width: 993px){
+@media(min-width: 1025px){
   body{
     font-size: 18px;
+  }
+
+  nav ul{
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
   }
 
   .container{
