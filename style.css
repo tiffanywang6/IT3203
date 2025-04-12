@@ -93,7 +93,7 @@ nav ul li a:hover{
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 15px auto 10px;
 }
 
 /* footer styling */
@@ -388,7 +388,7 @@ td a:hover{
   }
 
   .menu-toggle{
-    display: blocks;
+    display: block;
   }
 }
 
