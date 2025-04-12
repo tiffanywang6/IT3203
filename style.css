@@ -34,6 +34,13 @@ header{
   font-weight: 900; /* makes the text bolder */
 }
 
+.header-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 /* styling for h1 */
 h1{
   margin: 0; /* sets the margins to 0 */
@@ -90,10 +97,9 @@ nav ul li a:hover{
   color: white;
   font-size: 24px;
   border: none;
-  padding: 10px 15px;
+  padding: 8px 12px;
   cursor: pointer;
   border-radius: 8px;
-  margin-bottom: 15px auto 10px;
 }
 
 /* footer styling */
@@ -389,6 +395,17 @@ td a:hover{
 
   .menu-toggle{
     display: block;
+  }
+
+  #header-title{
+    font-size: 22px;
+    text-align: left;
+    flex: 1;
+  }
+
+  .header-flex{
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
