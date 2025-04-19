@@ -1,65 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Twang6's Website</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Proza+Libre:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-  
-  <body>
-    <main>
-      <header>
-        <h1 id="header-title">THE EVOLUTION OF THE WORLD WIDE WEB</h1>
-        <nav>
-          <ul> <!-- An unordered list for navigation links to other parts of my website -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="content.html">Content</a></li>
-            <li><a href="quiz.html">Self-Assessment Quiz</a></li>
-            <li><a href="keyterms.html">Key Terms</a></li>
-            <li><a href="references.html">References</a></li>
-          </ul>
-        </nav>
-      </header>
-      
-      <h2 class="page-title">REFERENCES</h2>
-      <div class="container"> <!-- container to help hold external references in individual boxes for a clean look -->
-        <div class="external-sites"> <!-- each reference has their own section with a link and image that is clickable -->
-          <a href="https://webfoundation.org/about/vision/history-of-the-web/" target="_blank">
-            <img src="https://webfoundation.org/wp-content/themes/WF/img/wwwf-logo-mobile.png"></a>
-        </div>
 
-        <div class="external-sites">
-          <a href="https://www.linkedin.com/pulse/evolution-impact-html5-revolutionizing-web-md-shohrab-sharif-tdk1c/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"></a>
-        </div>
-
-        <div class="external-sites">
-          <a href="https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Medium_logo_Wordmark_Black.svg"></a>
-        </div>
-
-        <div class="external-sites">
-          <a href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" target="_blank">
-            <img src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg"></a>
-        </div>
-
-        <div class="external-sites">        
-          <a href="https://www.geeksforgeeks.org/whats-difference-internet-web/" target="_blank">
-            <img src="https://media.geeksforgeeks.org/gfg-gg-logo.svg"></a>
-          <p>GEEKS FOR GEEKS</p> <!-- caption for the reference since Geeks for Geek's logo didn't write out its name -->
-        </div>
-        
-        <div class="external-sites">
-          <a href="https://jgzheng.github.io/IT3203/index.html" target="_blank">
-            <img src="https://www.kennesaw.edu/webstatic/_resources/images/template/ksu_horizontal.svg"></a>
-          <p>KSU IT 3203</p>
-        </div>
+<body>
+  <header>
+    <div class="header-flex">
+      <div class="toggle-container">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
       </div>
-        
-      <footer>
-        <p id="footer">DEVELOPED BY TWANG6 FOR IT 3203</p>
-      </footer>
-    </main>
-  </body>
-  </html>
+      <h1 id="header-title">THE EVOLUTION OF THE WORLD WIDE WEB</h1>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="content.html">Content</a></li>
+      <li><a href="quiz.html">Self-Assessment Quiz</a></li>
+      <li><a href="keyterms.html">Key Terms</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><button id="close-btn" class="close-btn" onclick="toggleMenu()">✕</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="page-title">REFERENCES</h2>
+    <table class="references-table">
+      <tr>
+        <td><a href="https://webfoundation.org/about/vision/history-of-the-web/" target="_blank">Web Foundation <span class="arrow">→</span></a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.linkedin.com/pulse/evolution-impact-html5-revolutionizing-web-md-shohrab-sharif-tdk1c/" target="_blank">LinkedIn: Sharif, Shorab (2024) <span class="arrow">→</span></a></td>
+      </tr>
+      <tr>
+        <td><a href="https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6" target="_blank">Medium: Make Computer Science Great Again (2024) <span class="arrow">→</span></a></td>
+      </tr>
+      <tr>
+        <td><a href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" target="_blank">Wikipedia - History of the Web: 2025 <span class="arrow">→</span></a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.geeksforgeeks.org/whats-difference-internet-web/" target="_blank">Geeks for Geeks: Internet vs Web: 2025 <span class="arrow">→</span></a></td>
+      </tr>
+      <tr>
+        <td><a href="https://jgzheng.github.io/IT3203/index.html" target="_blank">KSU IT 3203 Course Site <span class="arrow">→</span></a></td>
+      </tr>
+    </table>
+  </main>
+
+  <footer>
+    <p id="footer">DEVELOPED BY TWANG6 FOR IT 3203</p>
+  </footer>
+
+  <div class="custom-cursor"></div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      const toggle = document.getElementById("menu-toggle");
+      nav.classList.toggle("open");
+      toggle.classList.toggle("hidden", nav.classList.contains("open"));
+    }
+
+    const cursor = document.querySelector('.custom-cursor');
+    const nav = document.getElementById("nav-links");
+
+    document.addEventListener('mousemove', e => {
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.left = `${e.clientX}px`;
+
+      if (nav.classList.contains("open")) {
+        cursor.classList.add("nav-open");
+      } else {
+        cursor.classList.remove("nav-open");
+      }
+    });
+
+    const hoverTargets = document.querySelectorAll('a, button');
+    hoverTargets.forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+
+    window.addEventListener("resize", () => {
+      const nav = document.getElementById("nav-links");
+      const toggle = document.getElementById("menu-toggle");
+      if (window.innerWidth > 480) {
+        nav.classList.remove("open");
+        toggle.classList.remove("hidden");
+      }
+    });
+  </script>
+</body>
+</html>
