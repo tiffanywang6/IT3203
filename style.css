@@ -1,478 +1,323 @@
+/*this will remove any default sizing*/
 *{
-  box-sizing: border-box;
-}
-
-html, body{
   margin: 0;
   padding: 0;
-}
-
-/* this is the main container style */
-main{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
-/* this is styling for the body */
+/*styling for my body*/
 body{
-  text-align: center; /* centers text */
-  font-family: Arial; /* sets the body font to Arial */
-  background-color: #eef1e9; /* the background color of a body is set to this color */
-  color: #2c3e3a; /* sets the text color */
-  margin: 0;
-  padding: 0;
+  font-family: 'Proza Libre', sans-serif;
+  background-color: #f9f5e9;
+  color: #222222;
+  line-height: 1.6; /*adds vertical spacing between lines*/
+  padding: 0 1rem; /*adds space to both leftt and right sides of page*/
+  cursor: none; /*this will hide the defauly cursor*/ 
+  position: relative; 
+  min-height: 100vh; /*this makes sure the page will use the full screen height*/
+  overflow-x: hidden; /*does not allow horizontal scrolling*/
 }
 
-/* this is styling for paragraphs */
-p{
-  font-size: 15px; /* sets the font size */
-  font-family: Arial; /* sets the font to Arial */
+/*heading h1 and h2 design*/
+h1, h2{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
 }
 
-header, footer{
-  width: 100%;
-  background-color: #5e745c;
-  color: white;
-  padding: 20px 0;
-  margin: 0;
-  box-sizing: border-box;
+/*link design*/
+a{
+  text-decoration: none; /*removes the line under links when hovered*/
+  transition: all 0.3s ease; /*adds a smooth effect during hover*/
+  color: #1a3e3d;
 }
 
+/*header design*/
 header{
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
-footer{
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  margin-top: 40px;
-}
-
-/* used id selector to give the footer text a specific style */
-#footer{
-  font-family: Arial; /* set footer text to Arial */
-  font-weight: 550; /* makes the text bolder */
-}
-
-/* used id selector to style header titles */
-#header-title{
-  flex: 1;
-  text-align: center;
-  font-size: 30px;
-  color: white; /* sets the header color */
-  margin: 0;
-  font-weight: 900; /* makes the text bolder */
-}
-
+/*adds a flex layout design for the title and nav menu button*/
 .header-flex{
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding: 0 20px;
-}
-
-/* styling for h1 */
-h1{
-  margin: 0; /* sets the margins to 0 */
-  color: white; /* sets text color */
-  font-size: 30px; /* sets the font size */
-}
-
-/* styling for h2 */
-h2{
-  font-size: 25px; /* sets the font size */
-  color: #3e5948; /* sets text color */
-}
-
-/* used class selector to style the titles for each page title */
-.page-title{
-  font-size: 25px; /* sets font size */
-  font-weight: 800; /* makes the font bolder */
-  padding: 10px; /* adds padding around the title */
-}
-
-/* this is styling for the unordered list in the navigation */
-nav ul{
-  list-style: none;
-  padding: 0; /* sets padding to 0, removes the default */
-  margin: 15px 0 0; /* sets margin on left and right sides */
-  display: flex; /* applies flexbox layout */
+  gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center; /* centers the items */
-  gap: 20px;
 }
 
-/* styling for list items */
-nav ul li{
-  display: inline; /* puts all the list's items inline */
-  margin: 0 15px; /* adds spacing between each item */
-}
-
-/* styling for the navigation links */
-nav ul li a{ 
-  color: white; /* sets the color of the links */
-  font-size: 20px; /* sets the font size */
-  text-decoration: none; /* removes the underline when hovering links */
-}
-
-/* styling for hover effects on navigation links */
-nav ul li a:hover{
-  background-color: #3e5948; /* the background color of links when hovering */
-  border-radius: 5px; /* rounds the corners of the hover box */
-  padding: 10px; /* adds padding to make the hover effect look like a box */
-}
-
-.menu-toggle{
-  display: none;
-  background-color: #3e5948;
-  color: white;
-  font-size: 22px;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-right: auto;
-}
-
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* styling for tables */
-table{ 
-  margin: auto; /* centers the table */
-  border-collapse: collapse; /* collapses the boaders on a table */
-  background: none; /* removes any backgrounds on a table */
-}
-
-/* used class selector to style the content in a table */
-.table-content{
-  font-size: 18px; /* set font size */
-  text-align: left; /* aligns the table text left */
-  padding: 10px; /* adds padding on the inside of a table cell */
-}
-
-/* used class selector to style the container for the table */
-.table-container{
-  margin: auto; /* centers the container */
-  max-width: 80%; /* limits how big the container is */
-  max-height: 500px; /* limits how big the container is */
-  overflow-y: auto; /* this adds a scrollbar if the table's content forces the table to exceed its height */
-  border: 5px solid #3e5948; /* adds a boarder around the container */
-  text-align: left; /* aligns text to the left */
-}
-
-/* styling for the table header */
-thead{
-  position: sticky; /* this makes the table header fixed, so if there were a lot of key terms and the table had a scrollbar, the header would always be visible  */
-}
-
-/* styling for the table header cells */
-th{
-  padding: 10px; /* adds padding inside cells */
-  text-align: left; /* aligns text to the left */
-  border-bottom: 1px solid #527156 /* sets the border size, color, and look */
-}
-
-/* setyling for the table data */
-td{ 
-  padding: 20px; /* adds padding inside each data cell */
-  border-bottom: 1px solid #527156 /* sets the border color, size, and look */
-}
-
-/* styling for the links inside a table cell */
-td a{
-  text-decoration: none; /* removes any underlines for hover links */
-  color: #2c3e3a; /* sets the color of text */
-  border: transparent; /* no boarder */
-}
-
-/* hover effects for the links inside of a table cell */
-td a:hover{
-  color: #527156; /* sets the color link on hover */
-  border: 2px solid #527156; /* adds a border to the hover  */ 
-  border-radius: 5px; /* rounds the corners of the hover box */
-}
-
-/* styling for class selector for container */
-.container{
-  display: grid; /* uses grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* uses grid layout to create a responsive column  */
-  gap: 20px; /* sets a gap between each grid */
-  max-width: 1000px; /* limits the size of each container */
-  margin: 20px auto; /* centers the container while adding a set margin */
-}
-
-/* styling for each external link grid */
-.external-sites{
-  background-color: #ffff; /* background color of the grid */
-  border: 1px solid #dddd; /* border of each grid */
-  padding: 15px; /* adds padding inside each grid */
-  text-align: center; /* centers the text in each grid */
-  box-shadow: 0 2px 5px; /* adds a small shadow effect to each grid */
-}
-
-/* styling for the images in each grid */
-.external-sites img{
-  max-width: 100%; /* limits the size of images to the grid */
-  height: auto; /* auto adjusts the images height to keep its ratio */
-  display: block; /* puts the images in blocks */
-  margin: 0 auto 10px; /* centers the images and adds a small gap underneath for text */
-}
-
-/* styling for external link paragraph text */
-.external-sites p{
-  margin: 0; /* sets the margin to 0 */
-  font-size: 14px; /* sets the font size */
-  color: #2c3e3a; /* sets the font color */
-}
-
-.report-img{
+/*toggling design for the nav menu*/
+.toggle-container{
+  width: 45px;
+  height: 45px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
-/* styling for the images on subsections of my report */
-.report-img img{
-  width: 100%;
-  max-width: 500px; /* limits the size of the image */
-  height: auto; /* auto adjusts the image heights to keep its ratio */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* styling for the report text */
-.report-content{
-  text-align: left; /* aligns the text left */
-}
-
-/* styles each box that the quiz sits in */
-.question-box{ 
-  background-color: #ffffff; /* background color */
-  border: 2px solid #a8b9a1; /* boder color */
-  padding: 20px; /* adds some padding inside each box */
-  margin: 20px auto; /* centers */
-  max-width: 600px; /* limits the width of the box */
-  text-align: left; /* aligns the question text left */
-  border-radius: 15px; /* rounds the corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* adds a small shadow to the box */
-}
-
-/* styles the question text inside each box */
-.question-box p{ 
-  font-size: 18px; /* larger font for the question */
-  font-weight: 700; /* bold */
-  color: #3e5948; /* text color */
-}
-
-/* styling for each label inside the box */
-.question-box label{
-  display: block; /* makes each label an entire line */
-  margin: 8px 0; /* adds vertical space between each label */
-  font-size: 16px; /* font size */
-}
-
-.question-box label:hover{
-  background-color: #f1f6f0;
+/*this is the nav menu design*/
+.menu-toggle{
+  font-size: 1.75rem;
+  background: none;
+  border: none;
   cursor: pointer;
-  border-radius: 5px;
+  color: #1a3e3d;
 }
 
-/* styles the button on the quiz */
-#quiz-form button{
-  background-color: #3e5948; /* background color */
-  color: white; /* button text color */
-  padding: 12px 25px; /* adds space inside the button */
-  margin: 15px 10px; /* adds space around the button */
-  border: none; /* removes default border */
-  border-radius: 12px; /* rounds the corners */
-  font-size: 16px; /* text size */
-  cursor: pointer; /* cursor hover */
-  transition: background-color 0.3s; /* transition on hover */
+/*hides the menu button when nav is open*/
+.menu-toggle.hidden{
+  visibility: hidden;
+  pointer-events: none;
 }
 
-/* adds a button hover effect */
-#quiz-form button:hover{
-  background-color: #527156; /* color of the hover background */
+/*title design*/
+#header-title{
+  font-size: 1.8rem;
+  text-align: center;
+  flex: 1;
 }
 
-/* styling for the results box */
-#results {
-  background-color: #f9fdf7; /* background color */
-  border: 2px solid #a8b9a1; /* border color and size */
-  border-radius: 10px; /* rounds the edges */
-  padding: 30px; /* adds space inside */
-  max-width: 500px; /* limits the width */
-  margin: 40px auto; /* centers and adds space */
-  text-align: left; /* aligns text left */
-  font-size: 18px; /* font size */
-  box-shadow: 0 5px 12px rgba(0,0,0,0.05); /* adds a shadow */
-  color: #2c3e3a; /* text color */
-  line-height: 1.5; /* spaces between each line */
-  display: none; /* hides the default */
-  opacity: 0; /* starts invisible */
-  transition: opacity 0.3s ease, max-height 0.3s ease; /* fade animation */
+/*navigation menu*/
+.main-nav{
+  position: relative;
 }
 
-/* results will show when this class is added */
-#results.show{ 
-  opacity: 1; /* fade */
-  max-height: 1000px;
+/*this allows for the nav menu to take up the full screen when in mobile mode*/
+#nav-links{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  inset: 0;
+  background-color: #1a3e3d;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 999;
+  padding: 2rem;
 }
 
-/* final results style */
-.finalResults {
-  text-align: center; /* centers the text */
-  font-size: 40px; /* text size */
-  font-weight: 900; /* bold */
-  color: #3e5948; /* text color */
-  margin-bottom: 20px; /* adds space below */
+/*when the nav menu is "open", it will show the links*/
+#nav-links.open{
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
 }
 
-/* text for pass results */
-.pass{
-  color: green;
+/*nav menu link designs*/
+#nav-links li{
+  width: 100%;
+  text-align: center;
 }
 
-/* text for fail results */
-.fail{
-  color: red;
+/*this is the styling for the nav links*/
+#nav-links li a{
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
-/* styling for both pass and fail message */
-.pass, .fail {
-  background-color: #f9fdf7; /* background */
-  text-align: center; /* centers text */
-  border: 2px solid #a8b9a1; /* adds a border */
-  padding: 20px 30px; /* adds spacing inside */
-  border-radius: 15px; /* rounds the corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* adds a small box shadow */
-  font-weight: 900; /* bold */
-  font-size: 30px; /* text size */
-  margin: 20px auto; /* adds spacing and center the text */
-  width: fit-content; /* makes the text only as wide as needed */
+/*this is the nav link effects*/
+#nav-links li a:hover{
+  background-color: #ffffff;
+  color: #1a3e3d;
+  transform: translateY(-2px);
 }
 
-@media(max-width: 768px) {
-  body{
-    font-size: 15px;
-    padding: 10px;
+/*styling for the close button on the nav menu*/
+.close-btn{
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+/*this is the hover effect for the close button on nav menu*/
+.close-btn:hover{
+  background-color: #ffffff;
+  color: #1a3e3d;
+}
+
+/*main design*/
+main{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/*styling for the page title*/
+.page-title{
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/*the grid layout for the subsections*/
+.container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+/*subsection design*/
+.subsection-content{
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/*design for the subsection links*/
+.subsection-content a{
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #1a3e3d;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a3e3d;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/*hover effects for the subsection links*/
+.subsection-content a:hover{
+  background-color: #1a3e3d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/*design for the arrow in the subsection link*/
+.subsection-content a .arrow{
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+
+/*hover effects on the arrow*/
+.subsection-content a:hover .arrow{
+  transform: translateX(6px);
+}
+
+/*footer*/
+footer{
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
+}
+
+/*cursor design to a dot*/
+.custom-cursor{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/*changes the color of the cursor when it hovers over a link in the nav menu*/
+.custom-cursor.nav-open{
+  background-color: #f9f5e9;
+}
+
+/*cursor effects when hovering over a link*/
+.custom-cursor.hover{
+  background-color: #1a3e3d;
+  transform: translate(-50%, -50%) scale(2);
+}
+
+/*media queries*/
+
+/*mobile view*/
+@media (max-width: 480px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+  
+  #header-title{
+    font-size: 1.6rem;
   }
 
-  h1{
-    font-size: 22px;
+  #nav-links li a{
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 
-  nav ul{
-    display: none;
-    flex-direction: column;
+  #nav-links{
+    padding: 3rem 1rem;
+  }
+
+  .page-title{
+    font-size: 1.2rem;
+  }
+}
+
+/*tablet view*/
+@media (min-width: 481px) and (max-width: 768px){
+  #nav-links{
+    width: 300px;
+    height: 100vh;
     align-items: center;
-    gap: 12px;
-    margin-top: 10px;
+    justify-content: flex-start;
+    padding: 4rem 1.5rem;
   }
 
-  nav ul.show{
-    display: flex;
-  }
-
-  .question-box{
-    padding: 10px;
-    max-width: 90%;
-  }
-
-  #results{
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .report-img img{
-    max-width: 90%;
-    padding: 10px;
-  }
-
-  .table-container{
-    overflow-x: auto; /*adds horizontal scrolling*/
-    max-width: 95%;
-  }
-
-  table{
-    width: 100%; /*adjusts the table to fit its container*/
-    font-size: 14px;
-  }
-
-  td, th{
-    word-wrap: break-word;
-    padding: 10px;
-  }
-
-  th{
-    font-size: 16px;
-  }
-
-  td{
-    font-size: 14px;
-  }
-
-  .menu-toggle{
-    display: block;
+  .container{
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #header-title{
-    flex: 1;
-    text-align: center;
-    margin-right: 40px;
-  }
-
-  .header-flex{
-    flex-direction: row;
-    justify-content: center;
+    font-size: 2rem;
   }
 }
 
-@media(min-width: 769px) and (max-width: 1024px){
-  body{
-    font-size: 16px;
-  }
-
-  h1{
-    font-size: 26px;
-  }
-
-  nav ul{
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
+/*computer or larger screens*/
+@media (min-width: 769px){
   .container{
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .report-img img{
-    max-width: 95%;
-  }
-}
-
-@media(min-width: 1025px){
-  body{
-    font-size: 18px;
+  #header-title{
+    font-size: 2.2rem;
   }
 
-  nav ul{
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
+  .page-title{
+    font-size: 1.6rem;
   }
 
-  .container{
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  #nav-links{
+    width: 320px;
+    padding: 4rem 2rem;
+  }
+
+  #nav-links li a{
+    font-size: 1.15rem;
   }
 }
