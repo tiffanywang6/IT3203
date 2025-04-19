@@ -1,76 +1,82 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Twang6's Website</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Proza+Libre:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-  
+
 <body>
   <header>
     <div class="header-flex">
-      <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+      <div class="toggle-container">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+      </div>
       <h1 id="header-title">THE EVOLUTION OF THE WORLD WIDE WEB</h1>
     </div>
-    <nav>
-      <ul id="main-nav"> <!-- An unordered list for navigation links to other parts of my website -->
-        <li><a href="index.html">Home</a></li>
-        <li><a href="content.html">Content</a></li>
-        <li><a href="quiz.html">Self-Assessment Quiz</a></li>
-        <li><a href="keyterms.html">Key Terms</a></li>
-        <li><a href="references.html">References</a></li>        
-      </ul>
-    </nav>
   </header>
-  
+
+  <nav class="main-nav">
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="content.html">Content</a></li>
+      <li><a href="quiz.html">Self-Assessment Quiz</a></li>
+      <li><a href="keyterms.html">Key Terms</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><button id="close-btn" class="close-btn" onclick="toggleMenu()">✕</button></li>
+    </ul>
+  </nav>
+
   <main>
     <h2 class="page-title">SELF-ASSESSMENT QUIZ</h2>
-    <form id="quiz-form"> <!-- quiz starts here -->
-      <div class="question-box"> <!-- put this here to section off each question in a box -->
-        <p><strong>1. Who invented the World Wide Web?</strong></p> <!-- radio button question -->
-        <label><input type="radio" name="q1" value="a">Steve Jobs</label>
-        <label><input type="radio" name="q1" value="b">Bill Gates</label>
-        <label><input type="radio" name="q1" value="c">Tim Berners-Lee</label>
-        <label><input type="radio" name="q1" value="d">Mark Zuckerberg</label>
+    <form id="quiz-form" class="report-content">
+      <div class="question-box">
+        <p><strong>1. Who invented the World Wide Web?</strong></p>
+        <label><input type="radio" name="q1" value="a"> Steve Jobs</label>
+        <label><input type="radio" name="q1" value="b"> Bill Gates</label>
+        <label><input type="radio" name="q1" value="c"> Tim Berners-Lee</label>
+        <label><input type="radio" name="q1" value="d"> Mark Zuckerberg</label>
       </div>
 
-      <div class="question-box"> <!-- multiple choice question -->
+      <div class="question-box">
         <p><strong>2. Which of the following are the core technologies that form the World Wide Web?</strong></p>
-        <label><input type="checkbox" name="q2" value="HTML">HTML</label>
-        <label><input type="checkbox" name="q2" value="DNS">DNS</label>
-        <label><input type="checkbox" name="q2" value="URL">URL</label>
-        <label><input type="checkbox" name="q2" value="TCP/IP">TCP/IP</label>
-        <label><input type="checkbox" name="q2" value="HTTP">HTTP</label>        
+        <label><input type="checkbox" name="q2" value="HTML"> HTML</label>
+        <label><input type="checkbox" name="q2" value="DNS"> DNS</label>
+        <label><input type="checkbox" name="q2" value="URL"> URL</label>
+        <label><input type="checkbox" name="q2" value="TCP/IP"> TCP/IP</label>
+        <label><input type="checkbox" name="q2" value="HTTP"> HTTP</label>
       </div>
 
       <div class="question-box">
         <p><strong>3. Which of the following is NOT a web browser?</strong></p>
-        <label><input type="radio" name="q3" value="a">Safari</label>
-        <label><input type="radio" name="q3" value="b">Microsoft Excel</label>
-        <label><input type="radio" name="q3" value="c">Google Chrome</label>
-        <label><input type="radio" name="q3" value="d">Firefox</label>
+        <label><input type="radio" name="q3" value="a"> Safari</label>
+        <label><input type="radio" name="q3" value="b"> Microsoft Excel</label>
+        <label><input type="radio" name="q3" value="c"> Google Chrome</label>
+        <label><input type="radio" name="q3" value="d"> Firefox</label>
       </div>
 
       <div class="question-box">
         <p><strong>4. Which of the following is used to style web pages?</strong></p>
-        <label><input type="radio" name="q4" value="a">HTML</label>
-        <label><input type="radio" name="q4" value="b">JavaScript</label>
-        <label><input type="radio" name="q4" value="c">HTTP</label>
-        <label><input type="radio" name="q4" value="d">CSS</label>
+        <label><input type="radio" name="q4" value="a"> HTML</label>
+        <label><input type="radio" name="q4" value="b"> JavaScript</label>
+        <label><input type="radio" name="q4" value="c"> HTTP</label>
+        <label><input type="radio" name="q4" value="d"> CSS</label>
       </div>
 
-      <div class="question-box"> <!-- short answer question -->
+      <div class="question-box">
         <p><strong>5. What does HTML stand for?</strong></p>
         <input type="text" name="q5">
       </div>
 
       <div class="question-box">
         <p><strong>6. What components are part of a URL?</strong></p>
-        <label><input type="checkbox" name="q6" value="HTTP/HTTPS">HTTP/HTTPS</label>
-        <label><input type="checkbox" name="q6" value="File Paths">File Paths</label>
-        <label><input type="checkbox" name="q6" value="Domain Name">Domain Name</label>
-        <label><input type="checkbox" name="q6" value="IP Address">IP Address</label>
+        <label><input type="checkbox" name="q6" value="HTTP/HTTPS"> HTTP/HTTPS</label>
+        <label><input type="checkbox" name="q6" value="File Paths"> File Paths</label>
+        <label><input type="checkbox" name="q6" value="Domain Name"> Domain Name</label>
+        <label><input type="checkbox" name="q6" value="IP Address"> IP Address</label>
       </div>
 
       <div class="question-box">
@@ -80,194 +86,145 @@
 
       <div class="question-box">
         <p><strong>8. Which of these is an example of a domain name?</strong></p>
-        <label><input type="radio" name="q8" value="a">www.kennesaw.edu</label>
-        <label><input type="radio" name="q8" value="b">http://</label>
-        <label><input type="radio" name="q8" value="c">/admissions/#undergrad</label>
+        <label><input type="radio" name="q8" value="a"> www.kennesaw.edu</label>
+        <label><input type="radio" name="q8" value="b"> http://</label>
+        <label><input type="radio" name="q8" value="c"> /admissions/#undergrad</label>
       </div>
 
       <div class="question-box">
         <p><strong>9. What is the purpose of a hyperlink?</strong></p>
-        <label><input type="radio" name="q9" value="a">To connect web pages</label>
-        <label><input type="radio" name="q9" value="b">To open multimedia content</label>
-        <label><input type="radio" name="q9" value="c">To style a web page</label>
-        <label><input type="radio" name="q9" value="d">To store images</label>
+        <label><input type="radio" name="q9" value="a"> To connect web pages</label>
+        <label><input type="radio" name="q9" value="b"> To open multimedia content</label>
+        <label><input type="radio" name="q9" value="c"> To style a web page</label>
+        <label><input type="radio" name="q9" value="d"> To store images</label>
       </div>
 
       <div class="question-box">
         <p><strong>10. What does HTTP stand for?</strong></p>
         <input type="text" name="q10">
-      </div>
+        </div>
 
-      <button type="button" onclick="checkAnswers()">Submit Answers</button> <!-- button for submitting quiz -->
-      <button type="button" onclick="resetQuiz()">Restart Quiz</button> <!-- button for restarting quiz -->
+      <button type="button" onclick="checkAnswers()">Submit Answers</button>
+      <button type="button" onclick="resetQuiz()">Restart Quiz</button>
     </form>
-    <div id="results" aria-live="polite"></div> <!-- quiz results will be displayed in this div -->
-  </main>   
-      
+
+    <div id="results" aria-live="polite" class="results-box"></div>
+  </main>
 
   <footer>
     <p id="footer">DEVELOPED BY TWANG6 FOR IT 3203</p>
   </footer>
 
+  <div class="custom-cursor"></div>
 
-  <script> //my javascript for the quiz
-     function checkAnswers(){ //this is a function that checks the answer and calculates the score
-      let score = 0; //a counter to track correct answers
-      let output = ""; //a string that will list all the feedback for each question
-      const quiz = document.getElementById('quiz-form'); //this line is so that it knows to reference the quiz 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      const toggle = document.getElementById("menu-toggle");
+      nav.classList.toggle("open");
+      toggle.classList.toggle("hidden", nav.classList.contains("open"));
+    }
+    const cursor = document.querySelector('.custom-cursor');
+    const nav = document.getElementById("nav-links");
+    
+    document.addEventListener('mousemove', e => {
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.left = `${e.clientX}px`;
 
-      const q1 = quiz.querySelector('input[name="q1"]:checked'); //finds the question with the name q1
-      if(q1 && q1.value === "c"){ //checks if user selected the correct answer
-        score++; //adds 1 to the score if correct
-        output += "1. ✅ Correct!<br>"; 
+      if (nav.classList.contains("open")) {
+        cursor.classList.add("nav-open");} 
+      else {
+        cursor.classList.remove("nav-open");
       }
-      else{
-        output += "1. ❌ Correct Answer is Tim Berners-Lee<br>"; //if incorrect, it will add this string to the output
+    });
+    
+    const hoverTargets = document.querySelectorAll('a, button');
+    hoverTargets.forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+    
+    window.addEventListener("resize", () => {
+      const nav = document.getElementById("nav-links");
+      const toggle = document.getElementById("menu-toggle");
+      
+      if (window.innerWidth > 480) {
+        nav.classList.remove("open");
+        toggle.classList.remove("hidden");
       }
-     
-      let q2selected = []; //this will hold all the selected options in q2
-      const q2options = quiz.querySelectorAll('input[name="q2"]:checked'); //this gets all the answers that were selected in q2
-      for(let i=0; i<q2options.length; i++){ //a loop that goes through all the options selected
-        q2selected.push(q2options[i].value); //adds all the selected values into the q2selected array
+    });
+    
+    function checkAnswers() {
+      let score = 0;
+      let output = "";
+      const quiz = document.getElementById('quiz-form');
+
+      const q1 = quiz.querySelector('input[name="q1"]:checked');
+      if (q1 && q1.value === "c") {
+        score++;
+        output += "1. ✅ Correct!<br>";
+      } 
+      else {
+        output += "1. ❌ Correct Answer is Tim Berners-Lee<br>";
       }
       
-       const q2answer = ["HTML", "URL", "HTTP"]; //defines what is correct
-      if(arraysMatch(q2answer, q2selected)){ //compares the answers
-        score++;
-        output += "2. ✅ Correct!<br>";
-      }
-      else{
-        output += "2. ❌ Correct Answer is HTML, URL, HTTP<br>";
-        }
-
-      const q3 = quiz.querySelector('input[name="q3"]:checked'); 
-      if(q3 && q3.value === "b"){
-        score++;
-        output += "3. ✅ Correct!<br>";
-      }
-      else{
-        output += "3. ❌ Correct Answer is Microsoft Excel<br>";
-      }
+      let q2selected = [];
+      const q2options = quiz.querySelectorAll('input[name="q2"]:checked');
       
-       const q4 = quiz.querySelector('input[name="q4"]:checked');
-      if(q4 && q4.value === "d"){
-        score++;
-        output += "4. ✅ Correct!<br>";
-      }
-      else{
-        output += "4. ❌ Correct Answer is CSS<br>";
-      }
+      q2options.forEach(opt => q2selected.push(opt.value));
+      const q2answer = ["HTML", "URL", "HTTP"];
+      output += arraysMatch(q2answer, q2selected) ? "2. ✅ Correct!<br>" : "2. ❌ Correct Answer is HTML, URL, HTTP<br>";
+      if(arraysMatch(q2answer, q2selected)) score++;
 
-      const q5 = quiz.querySelector('input[name="q5"]').value.trim().toLowerCase(); //gets the text input, trims all spaces, and makes the text lowercase
-      if(q5 === "hypertext markup language"){ //compares the input to the correct answer
-        score++;
-        output += "5. ✅ Correct!<br>";
-      }
-      else{
-        output += "5. ❌ Correct Answer is HyperText Markup Language<br>";
-      }
+      const q3 = quiz.querySelector('input[name="q3"]:checked');
+      output += (q3 && q3.value === "b") ? (++score, "3. ✅ Correct!<br>") : "3. ❌ Correct Answer is Microsoft Excel<br>";
+
+      const q4 = quiz.querySelector('input[name="q4"]:checked');
+      output += (q4 && q4.value === "d") ? (++score, "4. ✅ Correct!<br>") : "4. ❌ Correct Answer is CSS<br>";
+
+      const q5 = quiz.querySelector('input[name="q5"]').value.trim().toLowerCase();
+      output += (q5 === "hypertext markup language") ? (++score, "5. ✅ Correct!<br>") : "5. ❌ Correct Answer is HyperText Markup Language<br>";
 
       let q6selected = [];
       const q6options = quiz.querySelectorAll('input[name="q6"]:checked');
-      for(let i=0; i<q6options.length; i++){
-        q6selected.push(q6options[i].value);
-      }
-     
+      q6options.forEach(opt => q6selected.push(opt.value));
       const q6answer = ["HTTP/HTTPS", "File Paths", "Domain Name"];
-      if(arraysMatch(q6answer, q6selected)){
-        score++;
-        output += "6. ✅ Correct!<br>";
-      }
-      else{
-        output += "6. ❌ Correct Answer is HTTP/HTTPS, File Paths, Domain Name<br>";
-      }
-      
-       const q7 = quiz.querySelector('input[name="q7"]').value.trim().toLowerCase();
-      if(q7 === "uniform resource locator"){
-        score++;
-        output += "7. ✅ Correct!<br>";
-      }
-      else{
-        output += "7. ❌ Correct Answer is Uniform Resource Locator<br>";
-      }
-      
-       const q8 = quiz.querySelector('input[name="q8"]:checked');
-      if(q8 && q8.value == "a"){
-        score++;
-        output += "8. ✅ Correct!<br>";
-      }
-      else{
-        output += "8. ❌ Correct Answer is www.kennesaw.edu<br>";
-      }
+      output += arraysMatch(q6answer, q6selected) ? "6. ✅ Correct!<br>" : "6. ❌ Correct Answer is HTTP/HTTPS, File Paths, Domain Name<br>";
+      if(arraysMatch(q6answer, q6selected)) score++;
+
+      const q7 = quiz.querySelector('input[name="q7"]').value.trim().toLowerCase();
+      output += (q7 === "uniform resource locator") ? (++score, "7. ✅ Correct!<br>") : "7. ❌ Correct Answer is Uniform Resource Locator<br>";
+
+      const q8 = quiz.querySelector('input[name="q8"]:checked');
+      output += (q8 && q8.value === "a") ? (++score, "8. ✅ Correct!<br>") : "8. ❌ Correct Answer is www.kennesaw.edu<br>";
 
       const q9 = quiz.querySelector('input[name="q9"]:checked');
-      if(q9 && q9.value == "a"){
-        score++;
-        output += "9. ✅ Correct!<br>";
-      }
-      else{
-        output += "9. ❌ Correct Answer is To connect web pages<br>";
-      }
+      output += (q9 && q9.value === "a") ? (++score, "9. ✅ Correct!<br>") : "9. ❌ Correct Answer is To connect web pages<br>";
 
       const q10 = quiz.querySelector('input[name="q10"]').value.trim().toLowerCase();
-      if(q10 === "hypertext transfer protocol"){
-        score++;
-        output += "10. ✅ Correct!<br>";
-      }
-      else{
-        output += "10. ❌ Correct Answer is HyperText Transfer Protocol<br>";
-      }
-        
-      output += "<h2 class='finalResults'>Results: " + score + " out of 10</h2>"; //this will show the final score
-      if(score >= 7){
-        output += "<h3 class='pass'>YOU PASSED! 🎉</h3>"; //message if passed
-      }
-      else{
-        output += "<h3 class='fail'> YOU FAILED! 😥</h3>"; //message if failed
-      }
+      output += (q10 === "hypertext transfer protocol") ? (++score, "10. ✅ Correct!<br>") : "10. ❌ Correct Answer is HyperText Transfer Protocol<br>";
 
-      //this section is so that the results will show in the results div
-       const resultsShow = document.getElementById('results'); 
-       resultsShow.innerHTML = output;
-       resultsShow.classList.add('show');
-     }
-    
-    function arraysMatch(correct, selected){ //this is an array that compares two arrays regardless of its order
-      if(correct.length !== selected.length){ //if the array differ in length, they are not equal
-        return false;
-      }
-      for(let i=0; i<correct.length; i++){ 
-        if(!selected.includes(correct[i])){ //if the correct answer is missing, then it would return false
-          return false;
-        }
-      }
-      return true;
+      output += `<h2 class='finalResults'>Results: ${score} out of 10</h2>`;
+      output += score >= 7 ? "<h3 class='pass'>YOU PASSED! 🎉</h3>" : "<h3 class='fail'>YOU FAILED! 😥</h3>";
+
+      const results = document.getElementById("results");
+      results.innerHTML = output;
+      results.classList.add("show");
     }
     
-    //this function is meant to reset the quiz and clear the results div
+    function arraysMatch(correct, selected){
+      if(correct.length !== selected.length) return false;
+      return correct.every(val => selected.includes(val));
+    }
+
     function resetQuiz(){
-      document.getElementById('quiz-form').reset(); //clear form selections and input
-      const resultsShow = document.getElementById('results');
-      resultsShow.innerHTML = ""; //clears the results div
-      resultsShow.classList.remove('show'); //remove the CSS class 
-    }
-    
-    function toggleMenu(){
-      document.getElementById("main-nav").classList.toggle("show");
+      document.getElementById('quiz-form').reset();
+      const results = document.getElementById('results');
+      results.innerHTML = "";
+      results.classList.remove("show");
     }
 
-    window.addEventListener("resize", function(){
-      const nav=document.getElementById("main-nav");
-      if(window.innerWidth>768){
-        nav.classList.remove("show");
-      }
-    });
   </script>
 </body>
 </html>
- 
 
-
-
-
-  
