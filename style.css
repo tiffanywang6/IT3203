@@ -249,7 +249,7 @@ footer{
 /*changes the color of the cursor when it hovers over a link in the nav menu*/
 .custom-cursor.nav-open{
   background-color: #f9f5e9;
-}
+} 
 
 /*cursor effects when hovering over a link*/
 .custom-cursor.hover{
