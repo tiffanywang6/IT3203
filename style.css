@@ -10,12 +10,12 @@ body{
   font-family: 'Proza Libre', sans-serif;
   background-color: #ffffff;
   color: #222222;
-  line-height: 1.6; /*adds vertical spacing between lines*/
-  padding: 0 1rem; /*adds space to both leftt and right sides of page*/
-  cursor: none; /*this will hide the defauly cursor*/ 
-  position: relative; 
-  min-height: 100vh; /*this makes sure the page will use the full screen height*/
-  overflow-x: hidden; /*does not allow horizontal scrolling*/
+  line-height: 1.6;
+  padding: 0 1rem;
+  cursor: none;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /*heading h1 and h2 design*/
@@ -24,14 +24,12 @@ h1, h2{
   font-weight: 700;
 }
 
-/*link design*/
 a{
-  text-decoration: none; /*removes the line under links when hovered*/
-  transition: all 0.3s ease; /*adds a smooth effect during hover*/
+  text-decoration: none;
+  transition: all 0.3s ease;
   color: #1a3e3d;
 }
 
-/*header design*/
 header{
   position: sticky;
   top: 0;
@@ -41,7 +39,6 @@ header{
   border-bottom: 1px solid #ddd;
 }
 
-/*adds a flex layout design for the title and nav menu button*/
 .header-flex{
   display: flex;
   align-items: center;
@@ -50,7 +47,6 @@ header{
   flex-wrap: wrap;
 }
 
-/*toggling design for the nav menu*/
 .toggle-container{
   width: 45px;
   height: 45px;
@@ -59,7 +55,6 @@ header{
   justify-content: center;
 }
 
-/*this is the nav menu design*/
 .menu-toggle{
   font-size: 1.75rem;
   background: none;
@@ -68,25 +63,21 @@ header{
   color: #1a3e3d;
 }
 
-/*hides the menu button when nav is open*/
 .menu-toggle.hidden{
   visibility: hidden;
   pointer-events: none;
 }
 
-/*title design*/
 #header-title{
   font-size: 1.8rem;
   text-align: center;
   flex: 1;
 }
 
-/*navigation menu*/
 .main-nav{
   position: relative;
 }
 
-/*this allows for the nav menu to take up the full screen when in mobile mode*/
 #nav-links{
   list-style: none;
   display: flex;
@@ -105,20 +96,17 @@ header{
   padding: 2rem;
 }
 
-/*when the nav menu is "open", it will show the links*/
 #nav-links.open{
   visibility: visible;
   opacity: 1;
   pointer-events: all;
 }
 
-/*nav menu link designs*/
 #nav-links li{
   width: 100%;
   text-align: center;
 }
 
-/*this is the styling for the nav links*/
 #nav-links li a{
   display: inline-block;
   font-size: 1.2rem;
@@ -129,14 +117,12 @@ header{
   transition: all 0.3s ease;
 }
 
-/*this is the nav link effects*/
 #nav-links li a:hover{
   background-color: #ffffff;
   color: #1a3e3d;
   transform: translateY(-2px);
 }
 
-/*styling for the close button on the nav menu*/
 .close-btn{
   font-size: 1.25rem;
   background-color: transparent;
@@ -152,20 +138,17 @@ header{
   margin: 0 auto;
 }
 
-/*this is the hover effect for the close button on nav menu*/
 .close-btn:hover{
   background-color: #ffffff;
   color: #1a3e3d;
 }
 
-/*main design*/
 main{
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-/*styling for the page title*/
 .page-title{
   font-size: 1.4rem;
   margin-bottom: 2rem;
@@ -173,7 +156,6 @@ main{
   letter-spacing: 1px;
 }
 
-/*the grid layout for the subsections*/
 .container{
   display: grid;
   gap: 1rem;
@@ -181,13 +163,11 @@ main{
   justify-items: center;
 }
 
-/*subsection design*/
 .subsection-content{
   text-align: center;
   padding: 1rem 0;
 }
 
-/*design for the subsection links*/
 .subsection-content a{
   display: inline-block;
   padding: 0.5rem 1.25rem;
@@ -200,14 +180,12 @@ main{
   transition: all 0.3s ease;
 }
 
-/*hover effects for the subsection links*/
 .subsection-content a:hover{
   background-color: #1a3e3d;
   color: #ffffff;
   transform: translateY(-2px);
 }
 
-/*design for the arrow in the subsection link*/
 .subsection-content a .arrow{
   display: inline-block;
   margin-left: 0.5rem;
@@ -216,12 +194,10 @@ main{
   vertical-align: middle;
 }
 
-/*hover effects on the arrow*/
 .subsection-content a:hover .arrow{
   transform: translateX(6px);
 }
 
-/*footer*/
 footer{
   text-align: center;
   padding: 2rem 0;
@@ -231,7 +207,6 @@ footer{
   margin-top: 3rem;
 }
 
-/*cursor design to a dot*/
 .custom-cursor{
   position: fixed;
   top: 0;
@@ -246,18 +221,15 @@ footer{
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/*changes the color of the cursor when it hovers over a link in the nav menu*/
 .custom-cursor.nav-open{
   background-color: #f9f5e9;
 } 
 
-/*cursor effects when hovering over a link*/
 .custom-cursor.hover{
   background-color: #1a3e3d;
   transform: translate(-50%, -50%) scale(2);
 }
 
-/*report content styling*/
 .report-content{
   padding: 2rem 0;
   max-width: 800px;
@@ -266,20 +238,17 @@ footer{
   line-height: 1.7;
 }
 
-/*report image styling*/
 .report-img{
   text-align: center;
   margin-top: 2rem;
 }
 
-/*keeps image in container and keeps ratio*/
 .report-img img{
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-/*adds spacing in report paragraphs*/
 .report-content p{
   margin-bottom: 1.25rem;
 }
@@ -306,72 +275,133 @@ ul{
   list-style-type: disc;
 }
 
-/*media queries*/
+.question-box {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
 
-/*mobile view*/
+.question-box label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.question-box input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #1a3e3d;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #1a3e3d;
+  border: 1px solid #1a3e3d;
+}
+
+#quiz-form button {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Result Box Styles */
+#results {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f2f8f6;
+  border: 2px solid #1a3e3d;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  text-align: left;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none; /* Hidden by default */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#results.show {
+  display: block;
+}
+
+.results-box {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f2f8f6;
+  border: 2px solid #1a3e3d;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.results-box.show {
+  display: block;
+}
+
+.results-box .finalResults,
+.results-box .pass,
+.results-box .fail {
+  text-align: center; /* centers final score and pass/fail text only */
+  margin-top: 1rem;
+}
+
+.finalResults {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.pass {
+  color: #007944;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.fail {
+  color: #b00020;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 @media (max-width: 480px){
-  .container{
-    grid-template-columns: 1fr;
-  }
-  
-  #header-title{
-    font-size: 1.6rem;
-  }
-
-  #nav-links li a{
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  #nav-links{
-    padding: 3rem 1rem;
-  }
-
-  .page-title{
-    font-size: 1.2rem;
-  }
+  .container{ grid-template-columns: 1fr; }
+  #header-title{ font-size: 1.6rem; }
+  #nav-links li a{ font-size: 1rem; padding: 0.6rem 1.2rem; }
+  #nav-links{ padding: 3rem 1rem; }
+  .page-title{ font-size: 1.2rem; }
 }
 
-/*tablet view*/
 @media (min-width: 481px) and (max-width: 768px){
-  #nav-links{
-    width: 300px;
-    height: 100vh;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 4rem 1.5rem;
-  }
-
-  .container{
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #header-title{
-    font-size: 2rem;
-  }
+  #nav-links{ width: 300px; height: 100vh; align-items: center; justify-content: flex-start; padding: 4rem 1.5rem; }
+  .container{ grid-template-columns: repeat(2, 1fr); }
+  #header-title{ font-size: 2rem; }
 }
 
-/*computer or larger screens*/
 @media (min-width: 769px){
-  .container{
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #header-title{
-    font-size: 2.2rem;
-  }
-
-  .page-title{
-    font-size: 1.6rem;
-  }
-
-  #nav-links{
-    width: 320px;
-    padding: 4rem 2rem;
-  }
-
-  #nav-links li a{
-    font-size: 1.15rem;
-  }
+  .container{ grid-template-columns: repeat(3, 1fr); }
+  #header-title{ font-size: 2.2rem; }
+  .page-title{ font-size: 1.6rem; }
+  #nav-links{ width: 320px; padding: 4rem 2rem; }
+  #nav-links li a{ font-size: 1.15rem; }
 }
- 
