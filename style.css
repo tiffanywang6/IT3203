@@ -33,6 +33,10 @@ a{
 
 /*header design*/
 header{
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1000;
   padding: 2rem 0 1rem;
   border-bottom: 1px solid #ddd;
 }
