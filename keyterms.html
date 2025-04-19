@@ -1,64 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Twang6's Website</title>
-  <link rel="stylesheet" href="style.css">
+  <!--import fonts from Google-->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Proza+Libre:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
   
-  <body>
-    <main>
-      <header>
-        <h1 id="header-title">THE EVOLUTION OF THE WORLD WIDE WEB</h1>
-        <nav>
-          <ul> <!-- An unordered list for navigation links to other parts of my website -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="content.html">Content</a></li>
-            <li><a href="quiz.html">Self-Assessment Quiz</a></li>
-            <li><a href="keyterms.html">Key Terms</a></li>
-            <li><a href="references.html">References</a></li>
-          </ul>
-        </nav>
-      </header>
-      
-      <h2 class="page-title">KEY TERMINOLOGY</h2> <!-- created a table for terminology as it would look organized and clean -->
-      <div class="table-container"> <!-- container for the table with class selector for styling -->
-        <table>
-          <thead> <!-- this section is for the table header -->
-            <tr>
-              <th>TERM</th>
-              <th>DEFINITION</th>
-            </tr>
-          </thead>
-          
-          <tbody> <!-- following section is for the table body -->
-            <tr>
-              <td>World Wide Web (WWW)</td>
-              <td>An information system that enables content sharing over the Internet through user-friendly ways meant to appeal to users beyond IT specialists and hobbyists.</td>
-            </tr>
-            
-            <tr>
-              <td>Hypertext Markup Language (HTML)</td>
-              <td>A markup language that is used to create documents on the World Wide Web incorporating text, graphics, sound, video, and hyperlinks.</td>
-            </tr>
-            
-            <tr>
-              <td>Hypertext Transfer Protocol (HTTP)</td>
-              <td>An application layer protocol in the Internet protocol suite model for distributed, collaborative, hypermedia information systems.</td>
-            </tr>
-            
-            <tr>
-              <td>Uniform Resource Locator (URL)</td>
-              <td>Also known as an address on the Web, is a reference to a resource that specifies its location on a computer network and a mechanism for retrieving it.</td>
-            </tr>
-          </tbody>
-        </table>
+<body>
+  <header>
+    <!--a container for my menu-->
+    <div class="header-flex">
+      <div class="toggle-container">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
       </div>
+      <h1 id="header-title">THE EVOLUTION OF THE WORLD WIDE WEB</h1>
+    </div>
+  </header>
+
+  <!--navigation menu-->
+  <nav class="main-nav">
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="content.html">Content</a></li>
+      <li><a href="quiz.html">Self-Assessment Quiz</a></li>
+      <li><a href="keyterms.html">Key Terms</a></li>
+      <li><a href="references.html">References</a></li>
+      <!--button to close the nav menu-->
+      <li><button id="close-btn" class="close-btn" onclick="toggleMenu()">✕</button></li>
+    </ul>
+  </nav>
+
+  <!--key terms-->
+  <main>
+    <h2 class="page-title">KEY TERMINOLOGY</h2>
+    <div class="report-content">
+      <table>
+        <thead>
+          <tr>
+            <th>TERM</th>
+            <th>DEFINITION</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>World Wide Web (WWW)</td>
+            <td>An information system that enables content sharing over the Internet through user-friendly ways meant to appeal to users beyond IT specialists and hobbyists.</td>
+          </tr>
+          <tr>
+            <td>Hypertext Markup Language (HTML)</td>
+            <td>A markup language used to create documents on the World Wide Web incorporating text, graphics, sound, video, and hyperlinks.</td>
+          </tr>
+          <tr>
+            <td>Hypertext Transfer Protocol (HTTP)</td>
+            <td>An application layer protocol in the Internet protocol suite model for distributed, collaborative, hypermedia information systems.</td>
+          </tr>
+          <tr>
+            <td>Uniform Resource Locator (URL)</td>
+            <td>A reference to a resource that specifies its location on a computer network and a mechanism for retrieving it.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
   
-      <footer>
-        <p id="footer">DEVELOPED BY TWANG6 FOR IT 3203</p>
-      </footer>
-    </main>
-  </body>
-  </html>
+  <footer>
+    <p id="footer">DEVELOPED BY TWANG6 FOR IT 3203</p>
+  </footer>
+  
+  <!--having a custom cursor for webpage-->
+  <div class="custom-cursor"></div>
+
+  <!--javascript-->
+  <script>
+    //toggle function to open and close my menu when clicked on X
+    function toggleMenu(){
+      const nav=document.getElementById("nav-links");
+      const toggle=document.getElementById("menu-toggle");
+      nav.classList.toggle("open");
+      toggle.classList.toggle("hidden", nav.classList.contains("open"));
+    }
+
+    //references the cursor
+    const cursor=document.querySelector('.custom-cursor');
+    const nav=document.getElementById("nav-links");
+
+    //for cursor appearance and characteristics
+    document.addEventListener('mousemove', e =>{
+      cursor.style.top=`${e.clientY}px`;
+      cursor.style.left=`${e.clientX}px`;
+
+      //loop to change the color of cursor if the nav is open
+      if (nav.classList.contains("open")){
+        cursor.classList.add("nav-open");
+      } else{
+        cursor.classList.remove("nav-open");
+      }
+    });
+
+    //changes the characteristics of the cursor when hovering over links and buttons
+    const hoverTargets=document.querySelectorAll('a, button');
+    hoverTargets.forEach(el =>{
+      el.addEventListener('mouseenter', () =>{
+        cursor.classList.add('hover');
+      });
+      el.addEventListener('mouseleave', () =>{
+        cursor.classList.remove('hover');
+      });
+    });
+
+    //this will close the nav menu if the screen is wider than a certain size
+    window.addEventListener("resize", () =>{
+      const nav = document.getElementById("nav-links");
+      const toggle = document.getElementById("menu-toggle");
+      if (window.innerWidth > 480){
+        nav.classList.remove("open");
+        toggle.classList.remove("hidden");
+      }
+    });
+  </script>
+</body>
+</html>
