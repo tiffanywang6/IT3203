@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Twang6's Website</title>
+  <!--import fonts from Google-->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Proza+Libre:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
   
 <body>
   <header>
+    <!--a container for my menu-->
     <div class="header-flex">
       <div class="toggle-container">
         <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
@@ -18,6 +20,7 @@
     </div>
   </header>
 
+  <!--navigation menu-->
   <nav class="main-nav">
     <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -25,13 +28,15 @@
       <li><a href="quiz.html">Self-Assessment Quiz</a></li>
       <li><a href="keyterms.html">Key Terms</a></li>
       <li><a href="references.html">References</a></li>
+      <!--button to close the nav menu-->
       <li><button id="close-btn" class="close-btn" onclick="toggleMenu()">✕</button></li>
     </ul>
   </nav>
 
+  <!--content directory-->
   <main>
     <h2 class="page-title">CONTENT DIRECTORY</h2>
-    <div class="container">
+    <div class="container"> <!--using container for subsections for grid layout-->
       <div class="subsection-content">
         <a href="html-subsection.html">Hypertext Markup Language (HTML) <span class="arrow">→</span></a>
       </div>
@@ -48,18 +53,52 @@
     <p id="footer">DEVELOPED BY TWANG6 FOR IT 3203</p>
   </footer>
 
+  <!--having a custom cursor for webpage-->
+  <div class="custom-cursor"></div>
+
+  <!--javascript-->
   <script>
-    function toggleMenu() {
-      const nav = document.getElementById("nav-links");
-      const toggle = document.getElementById("menu-toggle");
+    //toggle function to open and close my menu when clicked on X
+    function toggleMenu(){
+      const nav=document.getElementById("nav-links");
+      const toggle=document.getElementById("menu-toggle");
       nav.classList.toggle("open");
       toggle.classList.toggle("hidden", nav.classList.contains("open"));
     }
 
-    window.addEventListener("resize", () => {
+    //references the cursor
+    const cursor=document.querySelector('.custom-cursor');
+    const nav=document.getElementById("nav-links");
+
+    //for cursor appearance and characteristics
+    document.addEventListener('mousemove', e =>{
+      cursor.style.top=`${e.clientY}px`;
+      cursor.style.left=`${e.clientX}px`;
+
+      //loop to change the color of cursor if the nav is open
+      if (nav.classList.contains("open")){
+        cursor.classList.add("nav-open");
+      } else{
+        cursor.classList.remove("nav-open");
+      }
+    });
+
+    //changes the characteristics of the cursor when hovering over links and buttons
+    const hoverTargets=document.querySelectorAll('a, button');
+    hoverTargets.forEach(el =>{
+      el.addEventListener('mouseenter', () =>{
+        cursor.classList.add('hover');
+      });
+      el.addEventListener('mouseleave', () =>{
+        cursor.classList.remove('hover');
+      });
+    });
+
+    //this will close the nav menu if the screen is wider than a certain size
+    window.addEventListener("resize", () =>{
       const nav = document.getElementById("nav-links");
       const toggle = document.getElementById("menu-toggle");
-      if (window.innerWidth > 480) {
+      if (window.innerWidth > 480){
         nav.classList.remove("open");
         toggle.classList.remove("hidden");
       }
