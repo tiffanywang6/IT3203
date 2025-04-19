@@ -28,12 +28,12 @@ body{
 /* this is styling for paragraphs */
 p{
   font-size: 15px; /* sets the font size */
-  font-family: Georgia; /* sets the font to Georgia */
+  font-family: Arial; /* sets the font to Arial */
 }
 
 header, footer{
   width: 100%;
-  background-color: #a8b9a1;
+  background-color: #5e745c;
   color: white;
   padding: 20px 0;
   margin: 0;
@@ -84,7 +84,7 @@ h1{
 
 /* styling for h2 */
 h2{
-  Font-size: 25px; /* sets the font size */
+  font-size: 25px; /* sets the font size */
   color: #3e5948; /* sets text color */
 }
 
@@ -141,13 +141,13 @@ nav ul li a:hover{
 img{
   max-width: 100%;
   height: auto;
-  display: blocks;
+  display: block;
 }
 
 /* styling for tables */
 table{ 
   margin: auto; /* centers the table */
-  border-collapse: collapse; /* collapses the borders on a table */
+  border-collapse: collapse; /* collapses the boaders on a table */
   background: none; /* removes any backgrounds on a table */
 }
 
@@ -279,6 +279,12 @@ td a:hover{
   font-size: 16px; /* font size */
 }
 
+.question-box label:hover{
+  background-color: #f1f6f0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 /* styles the button on the quiz */
 #quiz-form button{
   background-color: #3e5948; /* background color */
@@ -312,13 +318,13 @@ td a:hover{
   line-height: 1.5; /* spaces between each line */
   display: none; /* hides the default */
   opacity: 0; /* starts invisible */
-  transition: opacity 0.3s ease; /* fade animation */
+  transition: opacity 0.3s ease, max-height 0.3s ease; /* fade animation */
 }
 
 /* results will show when this class is added */
 #results.show{ 
-  display: block; /* makes it visible */
   opacity: 1; /* fade */
+  max-height: 1000px;
 }
 
 /* final results style */
