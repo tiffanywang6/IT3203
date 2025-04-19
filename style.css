@@ -8,7 +8,7 @@
 /*styling for my body*/
 body{
   font-family: 'Proza Libre', sans-serif;
-  background-color: #f9f5e9;
+  background-color: #ffffff;
   color: #222222;
   line-height: 1.6; /*adds vertical spacing between lines*/
   padding: 0 1rem; /*adds space to both leftt and right sides of page*/
@@ -251,6 +251,33 @@ footer{
 .custom-cursor.hover{
   background-color: #1a3e3d;
   transform: translate(-50%, -50%) scale(2);
+}
+
+/*report content styling*/
+.report-content{
+  padding: 2rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/*report image styling*/
+.report-img{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/*keeps image in container and keeps ratio*/
+.report-img img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*adds spacing in report paragraphs*/
+.report-content p{
+  margin-bottom: 1.25rem;
 }
 
 /*media queries*/
