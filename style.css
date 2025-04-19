@@ -229,7 +229,7 @@ footer{
 
 /*cursor design to a dot*/
 .custom-cursor{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 8px;
