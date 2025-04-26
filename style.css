@@ -472,14 +472,16 @@ button:hover{
 /*reference table style*/
 .references-table{
   width: 100%;
-  max-width: 600px; /* limits width so table doesn't stretch too wide */
-  margin: 2rem auto;
+  max-width: 800px; 
+  margin: 0 auto;
   border-collapse: collapse;
+  overflow-x: auto;
 }
 
 .references-table td{
   padding: 0.75rem 1rem; /* reduce padding for less white space */
   text-align: center;
+  word-break: break-word;
 }
 
 .references-table td a {
@@ -494,7 +496,7 @@ button:hover{
   color: #1a3e3d;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1rem;
-  white-space: nowrap;
+  white-space: normal
   position: relative;
 }
 
@@ -538,6 +540,16 @@ button:hover{
   .page-title{ 
     font-size: 1.2rem; 
   }
+  
+  .references-table{
+    width: 100%;
+    font-size: 0.95rem; /* make text smaller for mobile */
+  }
+
+  .references-table td a{
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
 }
 
 /*sizing for screen between 481px and 768px*/
@@ -556,6 +568,16 @@ button:hover{
   
   #header-title{ 
     font-size: 2rem; 
+  }
+
+  .references-table{
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .references-table td a{
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -580,6 +602,11 @@ button:hover{
   
   #nav-links li a{ 
     font-size: 1.15rem; 
+  }
+
+  .references-table{
+    width: 80%;
+    max-width: 800px;
   }
 }
  
