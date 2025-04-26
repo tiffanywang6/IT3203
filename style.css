@@ -322,9 +322,9 @@ report-content p{
 
 /*table styling*/
 table{
-  table: 100%;
+  width: 100%;
   border-collapse: collapse;
-  margin-top 1.5rem;
+  margin-top: 1.5rem;
 }
 
 /*th and td styling*/
@@ -480,7 +480,7 @@ button:hover{
   text-align: center;
   font-weight: 600;
   color: #1a3e3d;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
   font-size: 1rem;
   max-width: 100%;
   white-space: nowrap;
@@ -489,13 +489,18 @@ button:hover{
 .references-table td a:hover{
   background-color: #1a3e3d;
   color: #ffffff;
-  transform: translateY(-2px);
 }
 
-.references-table .arrow{
+.references-table .arrow {
   font-size: 1.2rem;
   margin-left: 0.4rem;
   vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+/*hover effect*/
+.references-table td a:hover .arrow {
+  transform: translateX(6px);
 }
 
 /*sizing for screen smaller than 480px*/
