@@ -24,12 +24,14 @@ h1, h2{
   font-weight: 700;
 }
 
+/*link styling*/
 a{
   text-decoration: none;
   transition: all 0.3s ease;
   color: #1a3e3d;
 }
 
+/*styling for header*/
 header{
   position: sticky;
   top: 0;
@@ -39,6 +41,7 @@ header{
   border-bottom: 1px solid #ddd;
 }
 
+/* the flex container inside the header for my layout*/
 .header-flex {
   display: flex;
   align-items: center;
@@ -46,6 +49,7 @@ header{
   padding: 0 1.5rem; 
 }
 
+/*container for the toggle menu button*/
 .toggle-container {
   width: 60px;
   height: 60px;
@@ -54,6 +58,7 @@ header{
   justify-content: center;
 }
 
+/*styling for toggle hamburger button*/
 .menu-toggle {
   font-size: 2rem;
   background: none;
@@ -69,27 +74,32 @@ header{
   justify-content: center;
 }
 
+/*hover toggle effect for my menu*/
 .menu-toggle:hover {
   border-color: #1a3e3d;
   background-color: #f2f8f6;
 }
 
+/*hides menu toggle when nav menu is open*/
 .menu-toggle.hidden{
   visibility: hidden;
   pointer-events: none;
 }
 
+/*title in the header styling*/
 #header-title{
   font-size: 1.8rem;
   text-align: center;
   flex: 1;
 }
 
+/*nav menu styling*/
 .main-nav{
   position: relative;
 }
 
-#nav-links {
+/*styling for nav menu links*/
+#nav-links{
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -113,17 +123,20 @@ header{
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
+/*nav visibility when open*/
 #nav-links.open{
   visibility: visible;
   opacity: 1;
   pointer-events: all;
 }
 
+/*nav list styling*/
 #nav-links li{
   width: 100%;
   text-align: center;
 }
 
+/*nav link styling*/
 #nav-links li a{
   display: inline-block;
   font-size: 1.2rem;
@@ -134,12 +147,14 @@ header{
   transition: all 0.3s ease;
 }
 
+/*nav hover link effects*/
 #nav-links li a:hover{
   background-color: #ffffff;
   color: #1a3e3d;
   transform: translateY(-2px);
 }
 
+/*adds a close button and styles it in nav menu*/
 .close-btn{
   font-size: 1.25rem;
   background-color: transparent;
@@ -155,17 +170,20 @@ header{
   margin: 0 auto;
 }
 
+/*close button hover effects*/
 .close-btn:hover{
   background-color: #ffffff;
   color: #1a3e3d;
 }
 
+/*main content layout*/
 main{
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
+/*title for each page styling*/
 .page-title{
   font-size: 1.4rem;
   margin-bottom: 2rem;
@@ -173,6 +191,7 @@ main{
   letter-spacing: 1px;
 }
 
+/*grid container syyling*/
 .container{
   display: grid;
   gap: 1rem;
@@ -180,11 +199,13 @@ main{
   justify-items: center;
 }
 
+/*subsection content styling*/
 .subsection-content{
   text-align: center;
   padding: 1rem 0;
 }
 
+/*button links for subsections styling*/
 .subsection-content a{
   display: inline-block;
   padding: 0.5rem 1.25rem;
@@ -197,12 +218,14 @@ main{
   transition: all 0.3s ease;
 }
 
+/*adds a hover effect to each subsection link*/
 .subsection-content a:hover{
   background-color: #1a3e3d;
   color: #ffffff;
   transform: translateY(-2px);
 }
 
+/*arrow animation inside subsection links*/
 .subsection-content a .arrow{
   display: inline-block;
   margin-left: 0.5rem;
@@ -211,10 +234,12 @@ main{
   vertical-align: middle;
 }
 
+/*styles how the arrow moves*/
 .subsection-content a:hover .arrow{
   transform: translateX(6px);
 }
 
+/*footer styling*/
 footer{
   text-align: center;
   padding: 2rem 0;
@@ -224,6 +249,7 @@ footer{
   margin-top: 3rem;
 }
 
+/*creates a custom cursor for my page*/
 .custom-cursor{
   position: fixed;
   top: 0;
@@ -238,15 +264,18 @@ footer{
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+/*changes the cursor looks when my nav menu is open*/
 .custom-cursor.nav-open{
   background-color: #f9f5e9;
 } 
 
+/*changes how the cursor looks on hover*/
 .custom-cursor.hover{
   background-color: #1a3e3d;
   transform: translate(-50%, -50%) scale(2);
 }
 
+/*report styling content*/
 .report-content{
   padding: 2rem 0;
   max-width: 800px;
@@ -255,26 +284,31 @@ footer{
   line-height: 1.8;
 }
 
+/*report styling for h2*/
 .report-content h2{
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
 
+/*report styling for p*/
 report-content p{
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
+/*report styling for ul inside*/
 .report-content ul {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
+/*list items styling*/
 .report-content li {
   margin-bottom: 0.75rem;
 }
 
+/*image styling*/
 .report-img{
   text-align: center;
   margin-top: 2rem;
@@ -286,16 +320,14 @@ report-content p{
   border-radius: 10px;
 }
 
-.report-content p{
-  margin-bottom: 1.25rem;
-}
-
+/*table styling*/
 table{
   table: 100%;
   border-collapse: collapse;
   margin-top 1.5rem;
 }
 
+/*th and td styling*/
 th, td{
   border: 1px solid #ccc;
   padding: 0.75rem;
@@ -312,7 +344,7 @@ ul{
   list-style-type: disc;
 }
 
-.question-box {
+.question-box{
   margin-bottom: 2rem;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -320,13 +352,13 @@ ul{
   background-color: #ffffff;
 }
 
-.question-box label {
+.question-box label{
   display: block;
   margin: 0.5rem 0;
   font-size: 1rem;
 }
 
-.question-box input[type="text"] {
+.question-box input[type="text"]{
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -335,7 +367,8 @@ ul{
   border-radius: 6px;
 }
 
-button {
+/*styling for buttons*/
+button{
   display: inline-block;
   margin-right: 1rem;
   margin-top: 1rem;
@@ -348,19 +381,20 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+/*button hover effects*/
+button:hover{
   background-color: #ffffff;
   color: #1a3e3d;
   border: 1px solid #1a3e3d;
 }
 
-#quiz-form button {
+#quiz-form button{
   display: block;
   margin: 1rem auto;
 }
 
 /* Result Box Styles */
-#results {
+#results{
   margin-top: 2rem;
   padding: 2rem;
   background-color: #f2f8f6;
@@ -375,11 +409,11 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#results.show {
+#results.show{
   display: block;
 }
 
-.results-box {
+.results-box{
   margin-top: 2rem;
   padding: 2rem;
   background-color: #f2f8f6;
@@ -393,7 +427,8 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.results-box.show {
+/*styling for how results show*/
+.results-box.show{
   display: block;
 }
 
@@ -409,31 +444,34 @@ button:hover {
   font-weight: bold;
 }
 
-.pass {
+/*text styling when pass quiz*/
+.pass{
   color: #007944;
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.fail {
+/*text styling when fail quiz*/
+.fail{
   color: #b00020;
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.references-table {
+/*reference table style*/
+.references-table{
   width: 100%;
   max-width: 600px; /* limits width so table doesn't stretch too wide */
   margin: 2rem auto;
   border-collapse: collapse;
 }
 
-.references-table td {
+.references-table td{
   padding: 0.75rem 1rem; /* reduce padding for less white space */
   text-align: center;
 }
 
-.references-table td a {
+.references-table td a{
   display: block;
   padding: 0.5rem 1rem;
   background-color: #f2f8f6;
@@ -448,37 +486,82 @@ button:hover {
   white-space: nowrap;
 }
 
-.references-table td a:hover {
+.references-table td a:hover{
   background-color: #1a3e3d;
   color: #ffffff;
   transform: translateY(-2px);
 }
 
-.references-table .arrow {
+.references-table .arrow{
   font-size: 1.2rem;
   margin-left: 0.4rem;
   vertical-align: middle;
 }
 
+/*sizing for screen smaller than 480px*/
 @media (max-width: 480px){
-  .container{ grid-template-columns: 1fr; }
-  #header-title{ font-size: 1.6rem; }
-  #nav-links li a{ font-size: 1rem; padding: 0.6rem 1.2rem; }
-  #nav-links{ padding: 3rem 1rem; }
-  .page-title{ font-size: 1.2rem; }
+  .container{ 
+    grid-template-columns: 1fr; 
+  }
+  
+  #header-title{ 
+    font-size: 1.6rem; 
+  }
+
+  #nav-links li a{ 
+    font-size: 1rem; 
+    padding: 0.6rem 1.2rem; 
+  }
+  
+  #nav-links{ 
+    padding: 3rem 1rem; 
+  }
+  
+  .page-title{ 
+    font-size: 1.2rem; 
+  }
 }
 
+/*sizing for screen between 481px and 768px*/
 @media (min-width: 481px) and (max-width: 768px){
-  #nav-links{ width: 300px; height: 100vh; align-items: center; justify-content: flex-start; padding: 4rem 1.5rem; }
-  .container{ grid-template-columns: repeat(2, 1fr); }
-  #header-title{ font-size: 2rem; }
+  #nav-links{ 
+    width: 300px; 
+    height: 100vh; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 4rem 1.5rem; 
+  }
+  
+  .container{ 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  #header-title{ 
+    font-size: 2rem; 
+  }
 }
 
+/*sizing for larger screens*/
 @media (min-width: 769px){
-  .container{ grid-template-columns: repeat(3, 1fr); }
-  #header-title{ font-size: 2.2rem; }
-  .page-title{ font-size: 1.6rem; }
-  #nav-links{ width: 320px; padding: 4rem 2rem; }
-  #nav-links li a{ font-size: 1.15rem; }
+  .container{ 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  
+  #header-title{ 
+    font-size: 2.2rem; 
+  }
+  
+  .page-title{ 
+    font-size: 1.6rem; 
+  }
+  
+  #nav-links{ 
+    width: 320px; 
+    padding: 4rem 2rem; 
+  }
+  
+  #nav-links li a{ 
+    font-size: 1.15rem; 
+  }
 }
  
