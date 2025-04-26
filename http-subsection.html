@@ -33,11 +33,60 @@
     </ul>
   </nav>
 
-  <!--html article-->
   <main>
     <h2 class="page-title">HISTORY OF HYPERTEXT TRANSFER PROTOCOL (HTTP)</h2>
     <div class="report-content">
-      <p>HTTP Body Text</p>
+      <p>The Hypertext Transfer Protocol (HTTP) is the foundational data communication protocol of the WWW, which allows the transfer of hypermedia documents between both the clients and servers. HTTP was developed by Tim Berners-Lee and his team at the CERN in the early 1990’s. HTTP has significantly evolved to support and adopt the growing needs of users and applications.</p>
+
+      <h2><b>1991: HTTP/0.9</b></h2>
+      <p>HTTP/0.9 is the initial version of HTTP, which was introduced in  1991. It was a simple protocol designed to transfer raw HTML documents and it supported only the GET method and lacked headers.</p>
+      <p>The main key features of this version were:</p>
+      <ul>
+        <li>Simple protocol with only one method - GET</li>
+        <li>There were no headers, server only sent HTML content</li>
+        <li>Design was purely for transferring hypertext documents</li>
+      </ul>
+
+      <h2><b>1996: HTTP/1.0</b></h2>
+      <p>As the WWW continued to rapidly expand, there was a need for more formal and capable protocols. HTTP/1.0 was then introduced with many new features:</p>
+      <ul>
+        <li>Additional request methods: POST and HEAD</li>
+        <li>Introduction of HTTP headers for metadata (e.g., Content-Type, Content-Length)</li>
+        <li>Use of status codes to inform the client about results (e.g., 404 Not Found)</li>
+      </ul>
+      <p>However, HTTP/1.0 created a new TCP connection for every request, leading to inefficiencies.</p>
+
+      <h2><b>1997: HTTP/1.1</b></h2>
+      <p>The next generation of HTTP was HTTP/1.1, which addressed many of the major limitations found in previous versions:</p>
+      <ul>
+        <li>Persistent connections: multiple requests or responses over a single TCP connection</li>
+        <li>Chunked transfer encoding: ability to send dynamic content before knowing total size</li>
+        <li>Pipelining: clients could send many requests without waiting for responses</li>
+        <li>Better support for caching and proxy handling</li>
+      </ul>
+      
+      <p>HTTP/1.1 became the dominant protocol version for many decades.</p>
+
+      <h2><b>2015: HTTP/2</b></h2>
+      <p>HTTP/2 fundamentally changed the architecture through new concepts:</p>
+      <ul>
+        <li>Binary framing: more efficient parsing and transmission</li>
+        <li>Multiplexing: multiple streams within one connection, solving head-of-line blocking at the application level</li>
+        <li>Header compression: reduced overhead using the HPACK algorithm</li>
+        <li>Server push: ability to proactively send resources before clients request them</li>
+      </ul>
+      <p>HTTP/2 significantly improved page load times and overall web performance.</p>
+  
+      <h2><b>2022: HTTP/3</b></h2>
+      <p>HTTP/3 is the most current version of HTTP used today. It includes:</p>
+      <ul>
+        <li>Faster connection establishment with reduced handshake times</li>
+        <li>Built-in encryption as a core part of the protocol</li>
+        <li>Improved multiplexing without TCP’s head-of-line blocking problems</li>
+      </ul>
+      
+      <p>HTTP/3 represents a major leap forward, especially for mobile and real-time web applications.</p>
+      <p>From its simple beginnings as text documents, HTTP has evolved into a high-performing and sophisticated system that supports the massive complexity of the modern internet. Each version has solved previous challenges while anticipating future demands.</p>
     </div>
     
     <div class="report-img">
