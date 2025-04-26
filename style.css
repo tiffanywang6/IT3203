@@ -484,6 +484,7 @@ button:hover{
   font-size: 1rem;
   max-width: 100%;
   white-space: nowrap;
+  position: relative;
 }
 
 .references-table td a:hover{
