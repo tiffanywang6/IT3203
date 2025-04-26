@@ -191,6 +191,19 @@ main{
   letter-spacing: 1px;
 }
 
+/*styling for image homepage*/
+.home-img{
+  text-align: center; /* Center the image inside the div */
+  margin: 2rem 0; /* Space above and below the image */
+}
+
+.home-img img{
+  max-width: 90%; /* Make the image responsive but not too huge */
+  height: auto; /* Keep natural proportions */
+  border-radius: 12px; /* Rounded corners for nice look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
 /*grid container syyling*/
 .container{
   display: grid;
