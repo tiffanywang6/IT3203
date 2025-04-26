@@ -252,7 +252,27 @@ footer{
   max-width: 800px;
   margin: 0 auto;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.8;
+}
+
+.report-content h2{
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+report-content p{
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-content ul {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.report-content li {
+  margin-bottom: 0.75rem;
 }
 
 .report-img{
